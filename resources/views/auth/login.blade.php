@@ -7,16 +7,22 @@
 
         <!-- Email Address -->
         <div>
+             <div class="modal-header d-block text-center">
+                    <img class="logo mb-2" src="{{asset('images/logo.jpeg')}}" alt="Logo" style="width: 80px; height: 80px;">
+                    <h5 class="modal-title w-100" id="loginModalLabel">Log In</h5>
+                   
+                </div>
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            <x-text-input id="email" class="block mt-1 w-full form-control input-underline " type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
         <!-- Password -->
         <div class="mt-4">
+            
             <x-input-label for="password" :value="__('Password')" />
 
-            <x-text-input id="password" class="block mt-1 w-full"
+            <x-text-input id="password" class="block mt-1 w-full form-control input-underline"
                             type="password"
                             name="password"
                             required autocomplete="current-password" />
