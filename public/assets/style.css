@@ -1,0 +1,595 @@
+html,
+body {
+    overflow-x: hidden;
+}
+body,
+
+.modal-header,
+.modal-body,
+.modal-body input,
+.navbar,
+.list-group.btn,
+.lesson,
+.dropdown,
+.dropdown-menu,
+.dropdown {
+    background-color: #0A192F;
+    font-family: 'Poppins', sans-serif;
+
+}
+.shadow-divider {
+    height: 15px;
+    margin: 40px 0;
+    box-shadow: 0 10px 20px -2px rgba(0, 0, 0, 0.4);
+    background: transparent;
+}
+
+  .hero {
+      padding: 60px 0;
+  }
+
+  .blurred-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      -webkit-mask-image: linear-gradient(to right, black 65%, transparent);
+      mask-image: linear-gradient(to right, black 40%, transparent);
+  }
+
+  .hero-text h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+  }
+
+  .hero-text p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+  }
+
+
+/* start*/
+.logo-start {
+
+    flex-direction: column;
+    height: 100vh;
+}
+
+.logo-start img {
+    width: 300px;
+    height: 300px;
+
+    margin-right: 20px;
+}
+
+.logo-start h1 {
+
+
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-size: 2rem;
+
+    color: #FFFFFF;
+    text-align: center;
+
+}
+
+.logo-start a {
+    color: #FFFFFF;
+    background-color: #576A79;
+    text-align: center;
+    width: 200px;
+
+
+}
+
+.btn-outline-info:hover,
+.child .text-info:hover {
+    color: #0A192F !important;
+}
+
+.white-shadow {
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.6);
+}
+
+h1,
+p,
+.nav-item a,
+footer list-inline-item a,
+.modal-header h5,
+.input-underline .placeholder {
+    color: white;
+
+}
+
+.navbar-brand img,
+footer img,
+.logo {
+    height: 70px !important;
+
+    width: auto;
+    border-radius: 50%;
+}
+
+/*#0A192Fاللون الكحلي  */
+/* color: #0dcaf0
+ اللون الازرق الفاتح */
+.nav-link:hover,
+
+footer a:hover,
+.nav-link:focus,
+.modal-body a:hover,
+.h5-contact {
+
+    color: #0dcaf0 !important;
+
+}
+
+
+.nav-link.active {
+    color: #0dcaf0 !important;
+}
+
+.card-hover:hover {
+    border-color: #0dcaf0 !important;
+    border-width: 4px solid;
+}
+
+/* login/sign up */
+.input-underline {
+    border: none;
+    border-bottom: 0.5px solid white;
+    border-radius: 0;
+    outline: none;
+
+}
+
+.input-underline:hover,
+.form-control:hover {
+    border-bottom: 2px solid #0dcaf0;
+    border-color: #0dcaf0;
+    box-shadow: none;
+
+}
+
+.form-control::placeholder,
+.contact::placeholder {
+    color: black !important;
+    opacity: 0.5;
+
+}
+
+.input-underline::placeholder {
+    color: white !important;
+    opacity: 0.5;
+
+}
+
+.form-control,
+.input-underline {
+    color: #fff;
+    /* أبيض */
+}
+
+.modal-header {
+    border-bottom: none !important;
+}
+
+
+/* tutoorial */
+
+.card {
+    padding: 30px 0;
+    box-shadow: 0 0 15px 4px rgba(255, 255, 255, 0.8);
+    background-color: #0A192F;
+    width: 250px;
+    height: 300px;
+    margin: 40px auto;
+
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.image-wrapper:hover .overlay {
+    opacity: 0.8;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0A192F;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto;
+    /* اختياري */
+    margin-left: 10px;
+    /* لزر السابق */
+    margin-right: 10px;
+    /* لزر التالي */
+}
+
+
+
+
+
+
+
+
+
+.card-img-top {
+    height: 400px !important;
+    /* أو أي ارتفاع يناسبك */
+    object-fit: cover !important;
+    /* يقطع الصورة لتملأ المساحة بدون تشويه */
+    width: 100%;
+    /* تملأ عرض الكارد */
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+
+.active-lesson {
+    background-color: #0dcaf0 !important;
+    color: #000 !important;
+}
+
+
+/* dashbord */
+.dropdown {
+    background-color: white !important;
+
+}
+
+.dashbord {
+    background-color: #0A192F;
+}
+
+.dashbord.border {
+
+    border-color: #0dcaf0 !important;
+}
+
+.dashbord h3,
+h4 {
+    color: #0dcaf0;
+
+}
+
+.dashbord p {
+    color: white;
+
+}
+
+.dashbord ul li {
+    border-bottom: 1px solid #ccc;
+    /* يمكنك تغيير اللون والسُمك حسب الرغبة */
+    padding-bottom: 8px;
+    /* مسافة داخلية تحت النص لتمييز الحد */
+    margin-bottom: 8px;
+    border-color: #0dcaf0;
+    /* مسافة خارجية تفصل بين العناصر */
+}
+
+.btn-outline-custom {
+    background-color: transparent;
+    border: 2px solid #0dcaf0;
+    /* اللون المخصص */
+    color: #0dcaf0;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+/* .btn-outline-custom:hover, */
+span .badge {
+    background-color: #0dcaf0;
+    color: #0A192F;
+}
+
+.btn-custom-dropdown {
+    background-color: #0dcaf0;
+    color: #0dcaf0;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.btn-custom-dropdown:hover,
+.btn-custom-dropdown:focus {
+    background-color: #6aa6e5;
+    color: #0A192F;
+}
+
+/* القائمة المنسدلة */
+.custom-dropdown-menu {
+    background-color: #0dcaf0;
+    border: none;
+    border-radius: 10px;
+    min-width: 150px;
+}
+
+.custom-dropdown-menu .dropdown-item {
+    color: #0A192F;
+}
+
+.custom-dropdown-menu .dropdown-item:hover {
+    background-color: #0A192F;
+    color: #0dcaf0;
+}
+
+span.badge {
+    background-color: #0dcaf0;
+    color: #0A192F;
+}
+
+.swiper {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+
+
+/* change settings */
+
+
+.label-settings,
+input-image {
+
+    background-color: #0dcaf0;
+    color: #0A192F;
+}
+
+.form-section input {
+    background-color: #0A192F;
+
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #dee2e6;
+}
+
+.form-section,
+.settings-show {
+
+    border-style: solid;
+    border-color: #0dcaf0;
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background: #0A192F;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h3,
+.settings-show h3,
+.settings-show strong {
+    color: #0dcaf0;
+}
+
+
+/* about-us */
+
+
+
+.image-box img {
+
+    max-width: 300px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+/* coding tips */
+.section-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* responsive for small screens */
+}
+
+.swiper-tips {
+    width: 260px;
+}
+
+.swiper-tips .swiper-wrapper {
+    height: auto;
+}
+
+.swiper-tips .swiper-slide {
+    height: auto !important;
+}
+
+.swiper-tips-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+
+    color: #fff;
+}
+
+.swiper-tips-slide strong {
+    color: #0A192F;
+    font-size: 18px;
+
+    margin-bottom: 8px;
+    display: block;
+
+}
+
+.swiper-tips-slide span {
+    font-size: 16px;
+    color: #f0f0f0;
+    line-height: normal !important;
+
+}
+
+.swiper-tips-slide {
+    padding: 12px;
+
+}
+
+/* Colorful backgrounds */
+.swiper-tips-slide:nth-child(1n) {
+    background-color: #48D1CC;
+}
+
+.swiper-tips-slide:nth-child(2n) {
+    background-color: #FFA07A;
+}
+
+.swiper-tips-slide:nth-child(3n) {
+    background-color: #0dcaf0;
+}
+
+.swiper-tips-slide:nth-child(4n) {
+    background-color: #3CB371;
+}
+
+.swiper-tips-slide:nth-child(5n) {
+    background-color: #DB7093;
+}
+
+.swiper-tips-slide:nth-child(6n) {
+    background-color: #FADA5E;
+}
+
+.text-section {
+    max-width: 400px;
+    text-align: left;
+}
+
+.text-section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.text-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .section-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .text-section {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.form-control::placeholder,
+.form-select option {
+    color: #ccc !important;
+}
+
+.card {
+    border: 1px solid #1e2a3a;
+}
+
+.btn-success,
+.btn-primary {
+    background-color: #1f6feb;
+    border-color: #1f6feb;
+}
+
+
+
+h2 {
+    color: white;
+}
+
+label {
+    font-weight: 600;
+}
+
+.card-header {
+    background-color: #0dcaf0;
+    color: #1158c7;
+}
+
+
+
+
+.card-body,
+.form-control,
+.form-select {
+    background-color: #0A192F;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav .collapse {
+    visibility: visible;
+}
+
+.swiper-3d .swiper-slide-shadow-left ,.swiper-3d .swiper-slide-shadow-right{
+    display: none;
+}
+.tap:focus,
+.tap.active,
+.nav-pills .nav-link.active{
+    background-color: #0dcaf0 !important;
+    color: #0A192F !important;
+}
+
+.tab-content>.active {
+    display: none;
+}
+.tab-content>.active.show {
+    display: block;
+}
