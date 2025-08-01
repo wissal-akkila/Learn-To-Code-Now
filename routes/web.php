@@ -17,6 +17,9 @@ use App\Http\Controllers\EditPanelController;
 use App\Http\Controllers\SubscriberController;
 
 
+
+
+
 // الصفحة الرئيسية 
 Route::get('/', fn() => view('start'));
 
@@ -49,10 +52,18 @@ Route::view('/about-us', 'about-us')->name('about-us');
 Route::view('/privacy-policy', 'privacy-policy')->name('privacy.policy');
 Route::view('/terms-of-service', 'terms-of-service')->name('terms.service');
 
-
 // ارسال رسالة عبر الكونتاكت وسبسكرايب
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 Route::post('/subscribe', [SubscriberController::class, 'store'])->name('subscribe');
+
+
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/lessons/{slug}', [LessonController::class, 'showCourseLessons'])->name('lessons.show');
+
+
+
+
 // صفحات مطلوب لها الحماية بتسجيل الدخول
 Route::middleware('auth')->group(function () {
 
@@ -61,7 +72,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
 
     // صفحة اضافة درس
     Route::view('/add-lesson', [LessonController::class, 'showCourses'])->name('add.lesson');
@@ -98,7 +109,6 @@ Route::delete('/lessons/{lesson}', [LessonController::class, 'destroy'])->name('
 
 Route::put('/lessons/{id}', [LessonController::class, 'update_id'])->name('lessons.update');
 Route::get('/lessons/{id}', [LessonController::class, 'show_id'])->where('id', expression: '[0-9]+');
-Route::get('/lessons/{slug}', [LessonController::class, 'showCourseLessons'])->name('lessons.show');
 
  
 
@@ -160,7 +170,7 @@ Route::get('/quizzes/{quiz}/questions', [QuizController::class, 'questions']);
     });
 
 
-// حفظ الاشتراك
+
 
 // عرض الاشتراكات - للأدمن فقط
 Route::get('/admin/subscribers', [SubscriberController::class, 'index'])->name('subscribers');
