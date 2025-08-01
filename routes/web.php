@@ -17,7 +17,7 @@ use App\Http\Controllers\EditPanelController;
 use App\Http\Controllers\SubscriberController;
 
 
-// الصفحة الرئيسية
+// الصفحة الرئيسية 
 Route::get('/', fn() => view('start'));
 
 Route::get('/home', fn() => view('home'))->name('home');
