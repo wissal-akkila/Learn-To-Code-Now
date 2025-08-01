@@ -57,7 +57,6 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 Route::post('/subscribe', [SubscriberController::class, 'store'])->name('subscribe');
 
 
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/lessons/{slug}', [LessonController::class, 'showCourseLessons'])->name('lessons.show');
 
@@ -170,6 +169,7 @@ Route::get('/quizzes/{quiz}/questions', [QuizController::class, 'questions']);
     });
 
 
+// Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
 // عرض الاشتراكات - للأدمن فقط
