@@ -127,7 +127,7 @@
                         </div>
                     @endforeach
 
-                    <button type="submit" class="btn btn-success btn-outline-info">Submit Quiz</button>
+                    <button type="submit" class="btn btn-outline-success ">Submit Quiz</button>
                 </form>
             @else
             @endif

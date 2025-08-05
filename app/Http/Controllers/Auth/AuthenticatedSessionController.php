@@ -63,6 +63,6 @@ public function store(LoginRequest $request)
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/home');
     }
 }

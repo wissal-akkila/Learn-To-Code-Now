@@ -308,6 +308,7 @@
 
 
     <footer>
+     
         <p>&copy; {{ date('Y') }} Learn To Code Now. All rights reserved.</p>
     </footer>
 

@@ -99,7 +99,10 @@
 
     @yield('content')
 
-
+  <footer>
+   <hr style="border-color: white; margin-top: 2rem; margin-bottom: 2rem;" />
+        <p class="text-center d-block">&copy; {{ date('Y') }} Learn To Code Now. All rights reserved.</p>
+    </footer>
 
     <!-- Scripts -->
     <script src="{{ asset('assets/jquery/jquery-3.7.1.min.js') }}"></script>
