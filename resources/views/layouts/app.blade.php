@@ -95,9 +95,9 @@
 
             <!-- Right: Buttons -->
             <div class="d-none d-lg-flex gap-3 align-items-center ms-auto">
-                <button class="btn btn-sm btn-outline-info px-4" s data-bs-toggle="modal"
+                <button class="btn btn-md btn-outline-info px-4 fw-bold" s data-bs-toggle="modal"
                     data-bs-target="#loginModal">Login</button>
-                <button class="btn btn-sm btn-outline-info px-4" data-bs-toggle="modal"
+                <button class="btn btn-md btn-outline-info  fw-bold" data-bs-toggle="modal"
                     data-bs-target="#signupModal">SignUp</button>
             </div>
         @else
