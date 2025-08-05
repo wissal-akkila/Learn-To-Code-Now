@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Learn To Code Now') }}</title>
-     <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png">
+    <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 
@@ -138,10 +138,10 @@
                                     class="text-white hover:bg-gray-700 text-decoration-none">
                                     {{ __('Dashboard') }}
                                 </x-dropdown-link>
-                                    <x-dropdown-link :href="route('tutorials')"
-                                class="text-white hover:bg-gray-700 text-decoration-none">
-                                {{ __('Tutorials') }}
-                            </x-dropdown-link>
+                                <x-dropdown-link :href="route('tutorials')"
+                                    class="text-white hover:bg-gray-700 text-decoration-none">
+                                    {{ __('Tutorials') }}
+                                </x-dropdown-link>
                             @endif
 
                             <x-dropdown-link :href="route('settings.show')"
@@ -152,7 +152,7 @@
                                 class="text-white hover:bg-gray-700 text-decoration-none">
                                 {{ __('AI') }}
                             </x-dropdown-link>
-                            
+
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
                                 <x-dropdown-link :href="route('logout')"
@@ -322,23 +322,6 @@
     </div>
 
 
-    @if ($errors->any())
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
-            loginModal.show();
-        });
-    </script>
-@endif
-
-    @if ($errors->any())
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var signupModal = new bootstrap.Modal(document.getElementById('signupModal'));
-            signupModal.show();
-        });
-    </script>
-@endif
 
     <!-- Page Content -->
     <main>
@@ -392,14 +375,14 @@
 
 
 
-           <form action="{{ route('subscribe') }}" method="POST">
-    @csrf
-    <div class="d-flex flex-row flex-wrap justify-content-center gap-2 mt-4">
-        <input class="form-control btn-outline-info" style="max-width: 300px;"
-               type="text" name="email" placeholder="Enter your email" />
-        <button type="submit" class="btn btn-outline-info btn-sm">Subscribe</button>
-    </div>
-</form>
+            <form action="{{ route('subscribe') }}" method="POST">
+                @csrf
+                <div class="d-flex flex-row flex-wrap justify-content-center gap-2 mt-4">
+                    <input class="form-control btn-outline-info" style="max-width: 300px;" type="text"
+                        name="email" placeholder="Enter your email" />
+                    <button type="" class="btn btn-outline-info btn-sm">Subscribe</button>
+                </div>
+            </form>
 
             <!-- الاشتراك -->
             {{-- <form action="{{ route('subscribe') }}" method="POST">
@@ -462,3 +445,22 @@
 </body>
 
 </html>
+
+
+@if ($errors->login->any())
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+                loginModal.show();
+            });
+        </script>
+    @endif
+@if ($errors->signup->any())
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var signupModal = new bootstrap.Modal(document.getElementById('signupModal'));
+                signupModal.show();
+            });
+        </script>
+    @endif
