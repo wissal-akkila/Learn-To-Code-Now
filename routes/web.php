@@ -50,6 +50,10 @@ Route::view('/privacy-policy', 'privacy-policy')->name('privacy.policy');
 Route::view('/terms-of-service', 'terms-of-service')->name('terms.service');
 
 
+Route::get('/lessons/{slug}', [LessonController::class, 'showCourseLessons'])->name('lessons.show');
+
+
+
 // ارسال رسالة عبر الكونتاكت وسبسكرايب
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 Route::post('/subscribe', [SubscriberController::class, 'store'])->name('subscribe');
@@ -98,7 +102,6 @@ Route::delete('/lessons/{lesson}', [LessonController::class, 'destroy'])->name('
 
 Route::put('/lessons/{id}', [LessonController::class, 'update_id'])->name('lessons.update');
 Route::get('/lessons/{id}', [LessonController::class, 'show_id'])->where('id', expression: '[0-9]+');
-Route::get('/lessons/{slug}', [LessonController::class, 'showCourseLessons'])->name('lessons.show');
 
  
 
