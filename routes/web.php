@@ -15,6 +15,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EditPanelController;
 use App\Http\Controllers\SubscriberController;
+use App\Http\Controllers\LearningLogController;
 
 
 
@@ -189,3 +190,15 @@ Route::delete('/questions/{id}', [QuestionController::class, 'destroy']);
 
 
 });
+
+
+
+
+
+
+
+
+
+
+
+Route::post('/log-learning-time', [LearningLogController::class, 'store'])->middleware('auth');

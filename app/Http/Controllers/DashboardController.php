@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 use App\Models\Course;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-
+use Carbon\Carbon;
+use App\Models\LearningLog;
 class DashboardController extends Controller
 {
     public function index()
@@ -50,13 +51,45 @@ class DashboardController extends Controller
 
         $courses_ingoing = $user->courses()->whereNotIn('courses.id', $completedCourseIds)->get();
 
+
+
+        $startOfWeek = Carbon::now()->startOfWeek();
+$endOfWeek   = Carbon::now()->endOfWeek();
+
+$totalSeconds = LearningLog::where('user_id', $user->id)
+    ->whereBetween('created_at', [$startOfWeek, $endOfWeek])
+    ->sum('seconds');
+
+$learningHours = round($totalSeconds / 3600, 2);
+
+
+
+// ----------------------------------------------------
+$passedTestsCount = $user->courseResults->where('score', '>=', 5)->count();
+
+if ($passedTestsCount < 3) {
+    $learningLevel = 'Weak';
+    $badgeClass    = 'danger';
+} elseif ($passedTestsCount >= 3 && $passedTestsCount <= 6) {
+    $learningLevel = 'Good';
+    $badgeClass    = 'warning';
+} else {
+    $learningLevel = 'Excellent
+';
+    $badgeClass    = 'success';
+}
+
+
         return view('dashboard', compact(
             'completedCoursesCount',
             'completedPercentage',
             'ongoingCoursesCount',
             'ongoingPercentage',
             'totalCoursesCount',
-            'courses_ingoing'
+            'courses_ingoing',
+            'learningHours','learningLevel', 'badgeClass'
+
+
         ));
 
     }

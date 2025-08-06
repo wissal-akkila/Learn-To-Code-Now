@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Learn To Code Now') }}</title>
+    {{-- <title>{{ config('app.name', 'Learn To Code Now') }}</title> --}}
     <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -384,12 +384,7 @@
                 </div>
             </form>
 
-            <!-- الاشتراك -->
-            {{-- <form action="{{ route('subscribe') }}" method="POST">
-    @csrf
-    <input type="email" name="email" placeholder="Enter your email" required class="form-control mb-2">
-    <button type="submit" class="btn btn-primary">Subscribe</button>
-</form> --}}
+   
 
             <hr style="border-color: white; margin-top: 2rem; margin-bottom: 2rem;" />
 

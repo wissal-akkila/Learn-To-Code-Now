@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{ $title ?? 'Admin Panel' }}</title>
+     <title>{{ config('app.name', 'Learn To Code Now') }}</title>
      <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <!-- روابط CSS -->

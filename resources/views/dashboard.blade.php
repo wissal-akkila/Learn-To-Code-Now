@@ -59,14 +59,14 @@
      <div class="dashbord container rounded-4 mt-5 pt-4 border">
          <div class="row">
              <div class="col-12">
-                 <h3 class="fw-bold text-center">The Tests I Passed <span><i class="bi bi-trophy-fill"></i></span></h3>
+                 <h3 class="fw-bold text-center">The exams you have taken <span><i class="bi bi-trophy-fill"></i></span></h3>
 
                  <ul class="list-unstyled">
                      <li class=" pt-3 border-bottom border-3 pb-2">
 
                          <div class="d-flex border-bottom justify-content-between align-items-center ">
-                             <p>success</p>
-                             <span><i class="fa-regular fa-circle-check fa-2xl" style="color:green;"></i></span>
+                             <p class="fw-bold text-info">Passed</p>
+                             <span><i class="fa-solid fa-circle-check fa-2xl" style="color: green;"></i></span>
                          </div>
 
                          <ul>
@@ -83,7 +83,7 @@
 
                      <li class="pt-3 border-bottom pb-2">
                          <div class="d-flex justify-content-between align-items-center border-bottom ">
-                             <p>Fail</p>
+                             <p class="fw-bold text-info">Failed</p>
                              <span><i class="fa-solid fa-circle-exclamation fa-2xl" style="color:#cc3838;"></i></span>
                          </div>
                          <ul>
@@ -106,7 +106,7 @@
      <div class="container pb-5">
          <div class="d-flex gap-3 mt-5">
              <div class="dashbord rounded-4 pt-4 border w-50">
-                 <h4 class="fw-medium text-start ps-4">Monitoring your progress</h4>
+                 <h4 class="fw-bold text-start ps-4 text-info">Monitoring your progress</h4>
 
                  <div class="container pt-4">
                      <div class="row">
@@ -146,21 +146,43 @@
                  </div>
              </div>
              <div class="dashbord rounded-4 pt-4 border w-50">
-                 <h4 class="fw-medium text-start ps-4">Weekly progress review</h4>
+                 <h4 class="fw-bold text-info text-start ps-4">Weekly progress review</h4>
 
                  <ul>
                      <li class="d-flex justify-content-between align-items-center pt-3">
-                         <p> Number of learning hours for this week<span class="badge ms-5 ">5hours</span></p>
+                         <p> Number of learning hours for this week <span class="badge bg-info text-dark ms-5">{{ $learningHours }} hours</span></p>
                      </li>
-                     <li class="d-flex justify-content-between align-items-center pt-3 ">
-                         <p>Achievements during this week<span class="badge ms-5  ">5%</span></p>
-                     </li>
-                     <li class="d-flex justify-content-between align-items-center pt-3">
-                         <p>The evaluations I received <span class="badge ms-5  ">2</span></p>
-                     </li>
+                 <li class="d-flex  align-items-center pt-3">
+    <p class="mb-0 me-3">Your evaluation</p>
+
+    <div class="d-flex align-items-center">
+        <span class="badge bg-{{ $badgeClass }}">{{ $learningLevel }}</span>
+
+        @if ($badgeClass == 'success')
+            <i class="fa-regular fa-circle-check fa-xl ms-1" style="color: green;"></i>
+        @elseif ($badgeClass == 'warning')
+            <i class="fa-solid fa-exclamation-triangle fa-xl ms-1" style="color: orange;"></i>
+        @else
+            <i class="fa-solid fa-circle-xmark fa-xl ms-1" style="color: red;"></i>
+        @endif
+    </div>
+</li>
+                  
                  </ul>
              </div>
          </div>
      </div>
+<script>
+    let startTime = Date.now();
 
+    window.addEventListener('beforeunload', function () {
+        let endTime = Date.now();
+        let secondsSpent = Math.floor((endTime - startTime) / 1000);
+
+        // إرسال الوقت للسيرفر
+        navigator.sendBeacon("/log-learning-time", JSON.stringify({
+            seconds: secondsSpent
+        }));
+    });
+</script>
  @endsection
