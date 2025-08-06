@@ -2,6 +2,10 @@ html,
 body {
     overflow-x: hidden;
 }
+
+
+
+
 body,
 
 .modal-header,
@@ -124,9 +128,11 @@ footer a:hover,
 
 }
 
-
 .nav-link.active {
     color: #0dcaf0 !important;
+
+    font-weight: bold;
+
 }
 
 .card-hover:hover {

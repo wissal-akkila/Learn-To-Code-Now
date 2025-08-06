@@ -173,16 +173,6 @@
          </div>
      </div>
 <script>
-    let startTime = Date.now();
-
-    window.addEventListener('beforeunload', function () {
-        let endTime = Date.now();
-        let secondsSpent = Math.floor((endTime - startTime) / 1000);
-
-        // إرسال الوقت للسيرفر
-        navigator.sendBeacon("/log-learning-time", JSON.stringify({
-            seconds: secondsSpent
-        }));
-    });
+ 
 </script>
  @endsection

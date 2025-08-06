@@ -153,45 +153,5 @@
 
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.lesson-list').forEach(ul => {
-        const lessonId = ul.dataset.lessonId;
-        const userId = ul.dataset.user;
-        const totalItems = ul.querySelectorAll('li').length;
 
-        // استرجع البيانات من localStorage
-        let clickedItems = JSON.parse(localStorage.getItem(`lesson_${lessonId}_userId_${userId}`)) || [];
-
-        // تحقق من العناصر التي تم الضغط عليها مسبقًا
-        clickedItems.forEach(index => {
-            const li = ul.querySelector(`li[data-index="${index}"]`);
-            if (li) li.classList.add('visited');
-        });
-
-        checkCompletion();
-
-        // عند الضغط على عنصر
-        ul.querySelectorAll('li').forEach(li => {
-            li.addEventListener('click', function () {
-  
-                const index = li.dataset.index;
-                if (!clickedItems.includes(index)) {
-     
-                    clickedItems.push(index);
-                    localStorage.setItem(`lesson_${lessonId}_userId_${userId}`, JSON.stringify(clickedItems));
-                    li.classList.add('visited');
-                }
-                checkCompletion();
-            });
-        });
-
-        // تحقق من الاكتمال
-        function checkCompletion() {
-            if (clickedItems.length === totalItems-1) {
-
-                document.querySelector('.lesson-complete').classList.remove('d-none');
-            }
-        }
-    });
-});
 </script>

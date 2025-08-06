@@ -100,6 +100,9 @@
                 <button class="btn btn-md btn-outline-info  fw-bold" data-bs-toggle="modal"
                     data-bs-target="#signupModal">SignUp</button>
             </div>
+           <a href="{{ url()->previous() }}" class="border-0 bg-transparent text-white" style="font-size: 1.2rem;" title="Back">
+    <i class="fa-solid fa-arrow-right"></i>
+</a>
         @else
             <div class="hidden sm:flex items-center justify-end ms-auto">
                 <x-dropdown align="right" width="60">

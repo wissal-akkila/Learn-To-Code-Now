@@ -55,7 +55,6 @@ Route::view('/terms-of-service', 'terms-of-service')->name('terms.service');
 
 
 
-Route::get('/lessons/{slug}', [LessonController::class, 'showCourseLessons'])->name('lessons.show');
 
 
 
@@ -66,7 +65,6 @@ Route::post('/subscribe', [SubscriberController::class, 'store'])->name('subscri
 
 
 
-Route::get('/lessons/{slug}', [LessonController::class, 'showCourseLessons'])->name('lessons.show');
 
 
 
@@ -118,7 +116,7 @@ Route::put('/lessons/{id}', [LessonController::class, 'update_id'])->name('lesso
 Route::get('/lessons/{id}', [LessonController::class, 'show_id'])->where('id', expression: '[0-9]+');
 
  
-
+ 
 Route::get('/api/courses/{course}/lessons', [LessonController::class, 'getLessonsByCourse']);
 
 
@@ -202,3 +200,5 @@ Route::delete('/questions/{id}', [QuestionController::class, 'destroy']);
 
 
 Route::post('/log-learning-time', [LearningLogController::class, 'store'])->middleware('auth');
+
+Route::get('/lessons/{slug}', [LessonController::class, 'showCourseLessons'])->name('lessons.show');

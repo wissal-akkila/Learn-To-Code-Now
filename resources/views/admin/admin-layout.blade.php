@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-     <title>{{ config('app.name', 'Learn To Code Now') }}</title>
-     <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png">
+    <title>{{ config('app.name', 'Learn To Code Now') }}</title>
+    <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <!-- روابط CSS -->
     <link rel="stylesheet" href="{{ asset('assets/fonts/css2.css') }}">
@@ -25,73 +25,82 @@
             <a class="navbar-brand" href="#">
                 <img src="{{ asset('images/logo.jpeg') }}" style="height: 40px;" alt="Logo" />
             </a>
+            <div class="d-flex align-items-center gap-2">
+                <!-- يمين: المستخدم والأيقونة -->
+                <x-dropdown align="right" width="60">
+                    <x-slot name="trigger">
+                        <button
+                            class="inline-flex items-center px-4 py-2 border text-sm leading-4 font-medium rounded-lg text-white transition ease-in-out duration-150"
+                            style="background-color:#0A192F; border-color:#0A192F; width: 180px; justify-content: space-between;"
+                            onmouseover="this.style.backgroundColor='#0dcaf0'"
+                            onmouseout="this.style.backgroundColor='#0A192F'">>
 
-            <!-- يمين: المستخدم والأيقونة -->
-            <x-dropdown align="right" width="60">
-                <x-slot name="trigger">
-                    <button
-                        class="inline-flex items-center px-4 py-2 border text-sm leading-4 font-medium rounded-lg text-white transition ease-in-out duration-150"
-                        style="background-color:#0A192F; border-color:#0A192F; width: 180px; justify-content: space-between;"
-                        onmouseover="this.style.backgroundColor='#0dcaf0'"
-                        onmouseout="this.style.backgroundColor='#0A192F'">>
+                            <span>{{ Auth::user()->name }}</span> <img width="30px" height="30px"
+                                class="rounded-circle"
+                                src="{{ auth()->user()->profile_image ? asset('storage/' . auth()->user()->profile_image) : asset('images/user.jpg') }}">
 
-                        <span>{{ Auth::user()->name }}</span> <img width="30px" height="30px" class="rounded-circle"
-                            src="{{ auth()->user()->profile_image ? asset('storage/' . auth()->user()->profile_image) : asset('images/user.jpg') }}">
+                        </button>
+                    </x-slot>
 
-                    </button>
-                </x-slot>
+                    <x-slot name="content">
+                        <div style="background-color:#0A192F; border-radius: 8px;">
 
-                <x-slot name="content">
-                    <div style="background-color:#0A192F; border-radius: 8px;">
+                            @if (Auth::user()->role == 'admin')
+                                <x-dropdown-link :href="route('control-panel')"
+                                    class="text-white hover:bg-gray-700 text-decoration-none">
+                                    {{ __('Control Panel') }}
+                                </x-dropdown-link>
 
-                        @if (Auth::user()->role == 'admin')
-                            <x-dropdown-link :href="route('control-panel')"
+                                <x-dropdown-link :href="route('contact-list')"
+                                    class="text-white hover:bg-gray-700 text-decoration-none">
+                                    {{ __('contacts list') }}
+                                </x-dropdown-link>
+                                <x-dropdown-link :href="route('admin.edits-panel')"
+                                    class="text-white hover:bg-gray-700 text-decoration-none">
+                                    {{ __('Edits Panel') }}
+                                </x-dropdown-link>
+                                <x-dropdown-link :href="route('subscribers')"
+                                    class="text-white hover:bg-gray-700 text-decoration-none">
+                                    {{ __('subscribers') }}
+                                </x-dropdown-link>
+                            @else
+                                <x-dropdown-link :href="route('dashboard')"
+                                    class="text-white hover:bg-gray-700 text-decoration-none">
+                                    {{ __('Dashboard') }}
+                                </x-dropdown-link>
+                                <x-dropdown-link :href="route('tutorials')"
+                                    class="text-white hover:bg-gray-700 text-decoration-none">
+                                    {{ __('Tutorials') }}
+                                </x-dropdown-link>
+                            @endif
+                            <x-dropdown-link :href="route('home')"
                                 class="text-white hover:bg-gray-700 text-decoration-none">
-                                {{ __('Control Panel') }}
+                                {{ __('Home') }}
                             </x-dropdown-link>
 
-                            <x-dropdown-link :href="route('contact-list')"
+                            <x-dropdown-link :href="route('settings.show')"
                                 class="text-white hover:bg-gray-700 text-decoration-none">
-                                {{ __('contacts list') }}
+                                {{ __('Settings') }}
                             </x-dropdown-link>
-                            <x-dropdown-link :href="route('admin.edits-panel')"
+                            <x-dropdown-link :href="route('ai.page')"
                                 class="text-white hover:bg-gray-700 text-decoration-none">
-                                {{ __('Edits Panel') }}
+                                {{ __('AI') }}
                             </x-dropdown-link>
-                            <x-dropdown-link :href="route('subscribers')"
-                                class="text-white hover:bg-gray-700 text-decoration-none">
-                                {{ __('subscribers') }}
-                            </x-dropdown-link>
-                        @else
-                            <x-dropdown-link :href="route('dashboard')"
-                                class="text-white hover:bg-gray-700 text-decoration-none">
-                                {{ __('Dashboard') }}
-                            </x-dropdown-link>
-                            <x-dropdown-link :href="route('tutorials')"
-                                class="text-white hover:bg-gray-700 text-decoration-none">
-                                {{ __('Tutorials') }}
-                            </x-dropdown-link>
-                        @endif
-                        <x-dropdown-link :href="route('home')" class="text-white hover:bg-gray-700 text-decoration-none">
-                            {{ __('Home') }}
-                        </x-dropdown-link>
-
-                        <x-dropdown-link :href="route('settings.show')" class="text-white hover:bg-gray-700 text-decoration-none">
-                            {{ __('Settings') }}
-                        </x-dropdown-link>
-                        <x-dropdown-link :href="route('ai.page')" class="text-white hover:bg-gray-700 text-decoration-none">
-                            {{ __('AI') }}
-                        </x-dropdown-link>
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <x-dropdown-link :href="route('logout')" class="text-white hover:bg-gray-700 text-decoration-none"
-                                onclick="event.preventDefault(); this.closest('form').submit();">
-                                {{ __('Log Out') }}
-                            </x-dropdown-link>
-                        </form>
-                    </div>
-                </x-slot>
-            </x-dropdown>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <x-dropdown-link :href="route('logout')"
+                                    class="text-white hover:bg-gray-700 text-decoration-none"
+                                    onclick="event.preventDefault(); this.closest('form').submit();">
+                                    {{ __('Log Out') }}
+                                </x-dropdown-link>
+                            </form>
+                        </div>
+                    </x-slot>
+                </x-dropdown>
+                          <a href="{{ url()->previous() }}" class="border-0 bg-transparent text-white" style="font-size: 1.2rem;" title="Back">
+    <i class="fa-solid fa-arrow-right"></i>
+</a>
+            </div>
         </div>
     </div>
 
@@ -99,8 +108,8 @@
 
     @yield('content')
 
-  <footer>
-   <hr style="border-color: white; margin-top: 2rem; margin-bottom: 2rem;" />
+    <footer>
+        <hr style="border-color: white; margin-top: 2rem; margin-bottom: 2rem;" />
         <p class="text-center d-block">&copy; {{ date('Y') }} Learn To Code Now. All rights reserved.</p>
     </footer>
 
@@ -156,12 +165,12 @@
 
 
 
-                const data = await response.json();  
+                const data = await response.json();
 
-          
+
                 document.querySelector('.response').innerHTML = data.error.message || 'No reply received';
 
-            document.getElementById('response').innerHTML=''
+                document.getElementById('response').innerHTML = ''
 
 
             } catch (error) {
