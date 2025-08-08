@@ -49,6 +49,7 @@
     </div>
  
 {{-- -------------------------------------------------------------- --}}
+<div class="shadow-divider"></div>
 
  <div class="container mt-5">
     <div class="row mt-5  ">
@@ -111,10 +112,7 @@
           </div>
         <div class="col-md-6">
             
-                <img src="{{asset('images/home image 1 (4).jpeg')}}"data-aos="fade-left"
-     data-aos-anchor="#example-anchor"
-     data-aos-offset="500"
-     data-aos-duration="500" alt="">
+                <img src="{{asset('images/home image 1 (4).jpeg')}}"data-aos="fade-left" alt="">
           
         </div>
     </div>

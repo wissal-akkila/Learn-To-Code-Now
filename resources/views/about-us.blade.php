@@ -19,7 +19,7 @@
         <div class="row justify-content-center d-none d-lg-flex">
             <div class="col-md-3">
                 <div class="card-hover">
-                    <img style="width: 299px; height: 350px;" class="img-fluid card-img-top imganimated"
+                    <img style="width: 299px; height: 350px;" class="img-fluid card-img-top "data-aos="flip-left"
                         src="{{asset('images/Adapting SEO for Google AI Overview.jpg')}}" alt="Card image">
                     <div class="card-body" style="background-color: #0A192F;">
                         <h4 class="card-title text-center pt-3 text-info"data-aos="fade-down">Our Vision</h4>
@@ -32,7 +32,7 @@
 
             <div class="col-md-3">
                 <div class="card-hover ">
-                    <img style="width: 299px; height: 350px;" class="img-fluid card-img-top imganimated"
+                    <img style="width: 299px; height: 350px;" class="img-fluid card-img-top "data-aos="flip-left"
                         src="{{asset('images/MiniCPM3-4B_ The Open-Source AI Model Taking Scalability to New Heights.jpg')}}"
                         alt="Card image">
                     <div class="card-body" style="background-color: #0A192F;">
@@ -46,7 +46,7 @@
 
             <div class="col-md-3">
                 <div class="card-hover">
-                    <img style="width: 299px; height: 350px;" class="img-fluid card-img-top imganimated"
+                    <img style="width: 299px; height: 350px;" class="img-fluid card-img-top"data-aos="flip-left"
                         src="{{asset('images/JSON Guide_ Web Dev Essentials.jpg')}}" alt="Card image">
                     <div class="card-body" style="background-color: #0A192F;">
                         <h4 class="card-title text-center pt-3 text-info"data-aos="fade-down">What We Offer</h4>
