@@ -19,10 +19,10 @@
     <link rel="stylesheet" href="{{ asset('assets/bootstrap/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/swiper/swiper-bundle.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/style.css') }}">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
 
     <!-- Scripts -->
 
@@ -79,6 +79,12 @@
                             <a class="nav-link text-white {{ request()->routeIs('coding-tips') ? 'active' : '' }}"
                                 href="{{ route('coding-tips') }}">Coding Tips</a>
                         </li>
+                           <li class="nav-item">
+                            <a class="nav-link text-white {{ request()->routeIs('success.stories') ? 'active' : '' }}"
+                                href="{{ route('success.stories') }}">Success Stories</a>
+                        </li>
+
+                      
                     </ul>
                 </div>
             </div>
@@ -102,9 +108,10 @@
                 <button class="btn btn-md btn-outline-info  fw-bold" data-bs-toggle="modal"
                     data-bs-target="#signupModal">SignUp</button>
             </div>
-           <a href="{{ url()->previous() }}" class="border-0 bg-transparent text-white" style="font-size: 1.2rem;" title="Back">
-    <i class="fa-solid fa-arrow-right"></i>
-</a>
+            <a href="{{ url()->previous() }}" class="border-0 bg-transparent text-white" style="font-size: 1.2rem;"
+                title="Back">
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
         @else
             <div class="hidden sm:flex items-center justify-end ms-auto">
                 <x-dropdown align="right" width="60">
@@ -364,9 +371,17 @@
                                 Us</a>
                         </li>
                         <li class="list-inline-item"><a href="{{ route('coding-tips') }}"
-                                class="text-decoration-none text-light">Coding
+                                class="text-decoration-none text-light {{ request()->routeIs('coding-tips') ? 'active' : '' }}">Coding
                                 Tips</a>
                         </li>
+
+                        <li class="list-inline-item">
+                            <a href="{{ route('success.stories') }}"
+                                class="text-decoration-none text-light {{ request()->routeIs('success.stories') ? 'active' : '' }}">
+                                Success Stories
+                            </a>
+                        </li>
+
                     </ul>
                 </div>
 
@@ -389,7 +404,7 @@
                 </div>
             </form>
 
-   
+
 
             <hr style="border-color: white; margin-top: 2rem; margin-bottom: 2rem;" />
 
@@ -427,7 +442,7 @@
 
 
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="{{ asset('assets/jquery/jquery-3.7.1.min.js') }}"></script>
     <script src="{{ asset('assets/swiper/swiper-bundle.min.js') }}"></script>
@@ -448,19 +463,18 @@
 
 
 @if ($errors->login->any())
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
-                loginModal.show();
-            });
-        </script>
-    @endif
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+            loginModal.show();
+        });
+    </script>
+@endif
 @if ($errors->signup->any())
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                var signupModal = new bootstrap.Modal(document.getElementById('signupModal'));
-                signupModal.show();
-            });
-        </script>
-    @endif
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var signupModal = new bootstrap.Modal(document.getElementById('signupModal'));
+            signupModal.show();
+        });
+    </script>
+@endif

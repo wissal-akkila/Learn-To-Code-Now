@@ -7,21 +7,17 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EditPanelController;
+use App\Http\Controllers\LearningLogController;
 use App\Http\Controllers\LessonController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\QuizController;
+use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\EditPanelController;
-use App\Http\Controllers\SubscriberController;
-use App\Http\Controllers\LearningLogController;
 
-
-
-
-
-// الصفحة الرئيسية 
+// الصفحة الرئيسية
 Route::get('/', fn() => view('start'));
 
 Route::get('/home', fn() => view('home'))->name('home');
@@ -53,36 +49,19 @@ Route::view('/about-us', 'about-us')->name('about-us');
 Route::view('/privacy-policy', 'privacy-policy')->name('privacy.policy');
 Route::view('/terms-of-service', 'terms-of-service')->name('terms.service');
 
-
-
-
-
-
-
 // ارسال رسالة عبر الكونتاكت وسبسكرايب
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 Route::post('/subscribe', [SubscriberController::class, 'store'])->name('subscribe');
 
-
-
-
-
-
-
 // صفحات مطلوب لها الحماية بتسجيل الدخول
 Route::middleware('auth')->group(function () {
-
-
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-
     // صفحة اضافة درس
     Route::view('/add-lesson', [LessonController::class, 'showCourses'])->name('add.lesson');
-   
-
 
 // عرض صفحة الاتصالات
     Route::get('/contact', [ContactController::class, 'show'])->name('contact.show');
@@ -90,46 +69,36 @@ Route::middleware('auth')->group(function () {
 // كورسات عامة
     Route::get('/add-lesson', [CourseController::class, 'showCourses'])->name('add-new-lesson');
 
-  
-
-
     Route::get('/ai', [AuthController::class, 'aipage'])->name('ai.page');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::get('/dashboard', [DashboardController::class, 'status'])->name('dashboard');
- 
+
     Route::get('/admin/control-panel', [AdminController::class, 'controlPanel'])->name('control-panel');
     Route::get('/admin/contact-list', [AdminController::class, 'contactList'])->name('contact-list');
 
     Route::get('/admin/edits-panel', [EditPanelController::class, 'index'])->name('admin.edits-panel');
-   Route::get('/admin/courses/edit', [CourseController::class, 'editCourses'])->name('courses.edit');
+    Route::get('/admin/courses/edit', [CourseController::class, 'editCourses'])->name('courses.edit');
 //Route::Post('/admin/courses/update', [CourseController::class, 'update'])->name('courses.update');
-Route::put('/courses/{course}', [CourseController::class, 'update'])->name('courses.update');
-Route::delete('/courses/{id}', [CourseController::class, 'destroy'])->name('courses.destroy');
+    Route::put('/courses/{course}', [CourseController::class, 'update'])->name('courses.update');
+    Route::delete('/courses/{id}', [CourseController::class, 'destroy'])->name('courses.destroy');
 
+    Route::delete('/lessons/{lesson}', [LessonController::class, 'destroy'])->name('lessons.destroy');
 
- Route::delete('/lessons/{lesson}', [LessonController::class, 'destroy'])->name('lessons.destroy');
+    Route::delete('/lessons/{lesson}', [LessonController::class, 'destroy'])->name('lessons.destroy');
 
-Route::delete('/lessons/{lesson}', [LessonController::class, 'destroy'])->name('lessons.destroy');
+    Route::put('/lessons/{id}', [LessonController::class, 'update_id'])->name('lessons.update');
+    Route::get('/lessons/{id}', [LessonController::class, 'show_id'])->where('id', expression: '[0-9]+');
 
-Route::put('/lessons/{id}', [LessonController::class, 'update_id'])->name('lessons.update');
-Route::get('/lessons/{id}', [LessonController::class, 'show_id'])->where('id', expression: '[0-9]+');
-
- 
- 
-Route::get('/api/courses/{course}/lessons', [LessonController::class, 'getLessonsByCourse']);
-
+    Route::get('/api/courses/{course}/lessons', [LessonController::class, 'getLessonsByCourse']);
 
 // تعديل الكويزات
-Route::get('/quizzes/{id}/edit', [QuizController::class, 'edit'])->name('quizzes.edit');
-Route::delete('/quizzes/{id}/delete', [QuizController::class, 'destroy'])->name('quizzes.destroy');
+    Route::get('/quizzes/{id}/edit', [QuizController::class, 'edit'])->name('quizzes.edit');
+    Route::delete('/quizzes/{id}/delete', [QuizController::class, 'destroy'])->name('quizzes.destroy');
 
-Route::put('/quizzes/{id}', [QuizController::class, 'update'])->name('quizzes.update');
+    Route::put('/quizzes/{id}', [QuizController::class, 'update'])->name('quizzes.update');
 
-
-
-Route::get('/quizzes/{quiz}/questions', [QuizController::class, 'questions']);
-
+    Route::get('/quizzes/{quiz}/questions', [QuizController::class, 'questions']);
 
     // إعدادات المستخدم
     Route::get('/settings/show', [UserController::class, 'show'])->name('settings.show');
@@ -167,35 +136,24 @@ Route::get('/quizzes/{quiz}/questions', [QuizController::class, 'questions']);
     Route::post('/lessons/complete', [LessonController::class, 'complete'])->name('lessons.complete');
 
     Route::get('/ask-ai', function () {
-        return view('ask-ai'); 
+        return view('ask-ai');
     })->name('ask-ai.page');
 
     Route::get('/test-view', function () {
         return view('ask-ai');
     });
 
-
 // Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-
 // عرض الاشتراكات - للأدمن فقط
-Route::get('/admin/subscribers', [SubscriberController::class, 'index'])->name('subscribers');
+    Route::get('/admin/subscribers', [SubscriberController::class, 'index'])->name('subscribers');
 
-Route::get('/questions/{id}', [QuestionController::class, 'show']);
-Route::put('/questions/{id}', [QuestionController::class, 'update']);
-Route::delete('/questions/{id}', [QuestionController::class, 'destroy']);
-
-
+    Route::get('/questions/{id}', [QuestionController::class, 'show']);
+    Route::put('/questions/{id}', [QuestionController::class, 'update']);
+    Route::delete('/questions/{id}', [QuestionController::class, 'destroy']);
 
 });
-
-
-
-
-
-
-
-
+Route::view('/success-stories', 'success-stories')->name('success.stories');
 
 
 
