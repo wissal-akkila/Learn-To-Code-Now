@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 01, 2025 at 12:29 AM
+-- Generation Time: Aug 08, 2025 at 06:46 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -76,7 +76,9 @@ CREATE TABLE `completed_courses` (
 
 INSERT INTO `completed_courses` (`id`, `user_id`, `course_id`, `completed_at`, `created_at`, `updated_at`) VALUES
 (14, 10, 13, NULL, '2025-07-31 12:55:58', '2025-07-31 12:55:58'),
-(15, 10, 11, NULL, '2025-07-31 12:56:09', '2025-07-31 12:56:09');
+(15, 10, 11, NULL, '2025-07-31 12:56:09', '2025-07-31 12:56:09'),
+(16, 10, 8, NULL, '2025-08-01 06:16:03', '2025-08-01 06:16:03'),
+(17, 10, 12, NULL, '2025-08-01 06:16:52', '2025-08-01 06:16:52');
 
 -- --------------------------------------------------------
 
@@ -107,7 +109,13 @@ INSERT INTO `contacts` (`id`, `first_name`, `last_name`, `email`, `phone`, `mess
 (6, 'asdas', 'asdasd', 'asadsdas3ZFD@SFSDF.DSF', '1231234234', '2333333333333334', '2025-07-25 14:18:57', '2025-07-25 14:18:57'),
 (7, 'mnbhgfd', 'vgf', 'bh@gmail.com', '4744', 'mnbhgy', '2025-07-29 10:24:43', '2025-07-29 10:24:43'),
 (8, 'wissal', 'akkil', 'wissal@gmail.com', '5452154', 'kjkhugytuy', '2025-07-31 05:41:26', '2025-07-31 05:41:26'),
-(13, 'test', 'test', 'test@gmail.com', '435245', 'kjhgf', '2025-07-31 07:19:50', '2025-07-31 07:19:50');
+(13, 'test', 'test', 'test@gmail.com', '435245', 'kjhgf', '2025-07-31 07:19:50', '2025-07-31 07:19:50'),
+(14, 'wissal', 'akkila', 'wissal@gmail.com', '84152', 'jhyt6u', '2025-08-01 06:11:54', '2025-08-01 06:11:54'),
+(15, 'kjn', 'mnb', 'hjgft@gmail.com', '44214584', ',lkjhu', '2025-08-01 13:37:16', '2025-08-01 13:37:16'),
+(16, 'vcuyh', 'mknjhg', 'test@gmail.com', '874', 'kmjhgy', '2025-08-01 13:37:46', '2025-08-01 13:37:46'),
+(17, 'wissal', 'akkila', 'wissal@gmail.com', '25785', 'gfdytg', '2025-08-01 13:40:38', '2025-08-01 13:40:38'),
+(18, 'jhuytuy', 'kjhgft', 'akkilawissal@gmail.com', '05245877', 'kuytrewq', '2025-08-05 13:42:09', '2025-08-05 13:42:09'),
+(19, 'wissal', 'test', 'admin@gmail.com', '05245877', 'jhgfrer', '2025-08-06 06:07:35', '2025-08-06 06:07:35');
 
 -- --------------------------------------------------------
 
@@ -131,7 +139,7 @@ CREATE TABLE `courses` (
 --
 
 INSERT INTO `courses` (`id`, `title`, `slug`, `description`, `image`, `status`, `created_at`, `updated_at`) VALUES
-(7, 'HTML', 'html', 'Standard markup language used to create web page structure', NULL, 'in_progress', '2025-07-19 13:12:00', '2025-07-20 01:22:51'),
+(7, 'HTML', 'html', 'Standard markup language used to create web page structure.', NULL, 'in_progress', '2025-07-19 13:12:00', '2025-08-06 10:26:34'),
 (8, 'CSS', 'css', 'Stylesheet language used to design and layout HTML elements', NULL, 'in_progress', '2025-07-19 13:12:21', '2025-07-20 01:22:51'),
 (9, 'C#', 'c', 'Object-oriented programming language developed by Microsoft, mainly for Windows applications', NULL, 'in_progress', '2025-07-19 13:12:55', '2025-07-20 01:22:51'),
 (10, 'PHP', 'php', 'Server-side scripting language used to build dynamic web applications', NULL, 'in_progress', '2025-07-19 13:13:14', '2025-07-20 01:22:51'),
@@ -140,7 +148,8 @@ INSERT INTO `courses` (`id`, `title`, `slug`, `description`, `image`, `status`, 
 (13, 'OOP', 'oop', '(Object-Oriented Programming) A programming paradigm based on objects and classes', NULL, 'in_progress', '2025-07-19 13:14:16', '2025-07-20 01:22:51'),
 (14, 'Laravel', 'laravel', 'PHP web framework for building modern, robust, and secure web applications', NULL, 'in_progress', '2025-07-19 13:14:38', '2025-07-20 01:22:51'),
 (15, 'jQuery', 'jquery', 'JavaScript library that simplifies DOM manipulation and AJAX calls', NULL, 'in_progress', '2025-07-19 13:14:55', '2025-07-20 01:22:51'),
-(16, 'Vue.js', 'vuejs', 'Progressive JavaScript framework for building interactive user interfaces', NULL, 'in_progress', '2025-07-19 13:15:13', '2025-07-20 01:22:51');
+(16, 'Vue.js', 'vuejs', 'Progressive JavaScript framework for building interactive user interfaces', NULL, 'in_progress', '2025-07-19 13:15:13', '2025-07-20 01:22:51'),
+(68, 'widssa', 'ryan', 'oiuygtf', NULL, 'in_progress', '2025-08-06 06:38:55', '2025-08-08 08:17:50');
 
 -- --------------------------------------------------------
 
@@ -164,7 +173,10 @@ CREATE TABLE `course_results` (
 
 INSERT INTO `course_results` (`id`, `user_id`, `course_id`, `score`, `passed`, `created_at`, `updated_at`) VALUES
 (8, 10, 11, 1, 0, '2025-07-24 10:55:31', '2025-07-24 10:55:31'),
-(9, 10, 12, 6, 0, '2025-07-24 10:59:09', '2025-07-24 10:59:09');
+(9, 10, 12, 6, 0, '2025-07-24 10:59:09', '2025-07-24 10:59:09'),
+(17, 10, 10, 1, 0, '2025-08-05 13:58:39', '2025-08-05 14:00:43'),
+(18, 10, 14, 2, 0, '2025-08-05 14:24:51', '2025-08-05 14:31:06'),
+(19, 10, 16, 5, 0, '2025-08-05 14:33:12', '2025-08-05 14:33:12');
 
 -- --------------------------------------------------------
 
@@ -192,7 +204,8 @@ INSERT INTO `course_user` (`id`, `user_id`, `course_id`, `created_at`, `updated_
 (22, 10, 10, NULL, NULL),
 (25, 10, 9, NULL, NULL),
 (44, 10, 14, NULL, NULL),
-(45, 10, 16, NULL, NULL);
+(45, 10, 16, NULL, NULL),
+(50, 9, 68, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -243,6 +256,20 @@ CREATE TABLE `job_batches` (
   `cancelled_at` int(11) DEFAULT NULL,
   `created_at` int(11) NOT NULL,
   `finished_at` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `learning_logs`
+--
+
+CREATE TABLE `learning_logs` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `seconds` int(11) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -389,7 +416,8 @@ INSERT INTO `lessons` (`id`, `course_id`, `title`, `content`, `example`, `slug`,
 (149, 16, 'Dynamic CSS Classes with v-bind:class', 'You can bind class names dynamically based on conditions.', '<div id=\"app\">\r\n  <p :class=\"{ active: isActive }\">Styled Text</p>\r\n  <button @click=\"isActive = !isActive\">Toggle Class</button>\r\n</div>\r\n\r\n<style>\r\n.active {\r\n  color: green;\r\n  font-weight: bold;\r\n}\r\n</style>\r\n\r\n<script>\r\n  Vue.createApp({\r\n    data() {\r\n      return {\r\n        isActive: false\r\n      };\r\n    }\r\n  }).mount(\'#app\');\r\n</script>', NULL, '2025-07-22 10:06:11', '2025-07-22 10:06:11', 'The class active is added or removed based on isActive.', NULL),
 (150, 16, 'Creating Components', 'Vue allows reusable UI blocks through components.', '<div id=\"app\">\r\n  <greeting></greeting>\r\n</div>\r\n\r\n<script>\r\n  const Greeting = {\r\n    template: \'<h2>Hello from the component!</h2>\'\r\n  };\r\n\r\n  const app = Vue.createApp({});\r\n  app.component(\'greeting\', Greeting);\r\n  app.mount(\'#app\');\r\n</script>', NULL, '2025-07-22 10:06:54', '2025-07-22 10:06:54', 'We created a greeting component and used it in the main app.', NULL),
 (151, 16, 'Passing Data to Components with props', 'Props allow the parent component to send data to the child.', '<div id=\"app\">\r\n  <greeting name=\"John\"></greeting>\r\n</div>\r\n\r\n<script>\r\n  const Greeting = {\r\n    props: [\'name\'],\r\n    template: \'<p>Hello, {{ name }}!</p>\'\r\n  };\r\n\r\n  const app = Vue.createApp({});\r\n  app.component(\'greeting\', Greeting);\r\n  app.mount(\'#app\');\r\n</script>', NULL, '2025-07-22 10:07:54', '2025-07-22 10:07:54', 'The name prop is passed from the parent and rendered inside the child component.', NULL),
-(152, 16, 'Handling Form Submission', 'Vue can handle forms easily using v-model and @submit.prevent.', '<div id=\"app\">\r\n  <form @submit.prevent=\"handleSubmit\">\r\n    <input v-model=\"email\" placeholder=\"Enter your email\">\r\n    <button type=\"submit\">Submit</button>\r\n  </form>\r\n  <p>Your email: {{ email }}</p>\r\n</div>\r\n\r\n<script>\r\n  Vue.createApp({\r\n    data() {\r\n      return {\r\n        email: \'\'\r\n      };\r\n    },\r\n    methods: {\r\n      handleSubmit() {\r\n        alert(`Submitted: ${this.email}`);\r\n      }\r\n    }\r\n  }).mount(\'#app\');\r\n</script>', NULL, '2025-07-22 10:08:40', '2025-07-22 10:08:40', 'The form prevents page reload and calls handleSubmit on submit.', NULL);
+(152, 16, 'Handling Form Submission', 'Vue can handle forms easily using v-model and @submit.prevent.', '<div id=\"app\">\r\n  <form @submit.prevent=\"handleSubmit\">\r\n    <input v-model=\"email\" placeholder=\"Enter your email\">\r\n    <button type=\"submit\">Submit</button>\r\n  </form>\r\n  <p>Your email: {{ email }}</p>\r\n</div>\r\n\r\n<script>\r\n  Vue.createApp({\r\n    data() {\r\n      return {\r\n        email: \'\'\r\n      };\r\n    },\r\n    methods: {\r\n      handleSubmit() {\r\n        alert(`Submitted: ${this.email}`);\r\n      }\r\n    }\r\n  }).mount(\'#app\');\r\n</script>', NULL, '2025-07-22 10:08:40', '2025-07-22 10:08:40', 'The form prevents page reload and calls handleSubmit on submit.', NULL),
+(173, 68, 'nbvgf', 'نتالب', 'نتاف', NULL, '2025-08-06 06:59:02', '2025-08-08 08:25:03', 'منتالبي', NULL);
 
 -- --------------------------------------------------------
 
@@ -436,7 +464,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (26, '2025_07_23_194553_update_lesson_id_to_course_id_in_completed_lessons', 21),
 (27, '2025_07_23_194724_update_lesson_id_to_course_id_in_completed_lessons', 22),
 (28, '2025_07_23_194921_create_completed_courses_table', 23),
-(29, '2025_07_28_162540_create_subscribers_table', 24);
+(29, '2025_07_28_162540_create_subscribers_table', 24),
+(30, '2025_08_05_181009_create_learning_logs_table', 25);
 
 -- --------------------------------------------------------
 
@@ -514,7 +543,7 @@ INSERT INTO `questions` (`id`, `quiz_id`, `question_text`, `option_a`, `created_
 (72, 16, 'What is the purpose of CSRF protection in Laravel?', 'Prevents SQL injection', '2025-07-22 09:43:03', '2025-07-22 09:43:03', 'Secures API endpoints', 'Protects against cross-site request forgery', 'Manages database session', 'C'),
 (73, 16, 'Which directory contains the Laravel configuration files?', 'app/config', '2025-07-22 09:43:58', '2025-07-22 09:43:58', 'config/', 'resources/config', 'settings/', 'B'),
 (74, 16, 'What is the use of .env file in Laravel?', 'Define routes', '2025-07-22 09:44:48', '2025-07-22 09:44:48', 'Store environment variables', 'Compile Blade templates', 'Manage sessions', 'B'),
-(85, 18, 'What is Vue.js? A)B) C) D) A', 'A CSS framework', '2025-07-22 10:16:30', '2025-07-22 10:16:30', 'A back-end language', 'A JavaScript framework for building UIs', 'database engine', 'C'),
+(85, 18, 'What is Vue.js?', 'A CSS framework', '2025-07-22 10:16:30', '2025-08-06 06:42:40', 'A back-end language', 'A JavaScript framework for building UIs', 'database engine', 'c'),
 (86, 18, 'Who created Vue.js?', 'Evan You', '2025-07-22 10:18:33', '2025-07-22 10:18:33', 'Mark Zuckerberg', 'Brendan Eich', 'Dan Abramov', 'A'),
 (87, 18, 'What is the correct CDN to include Vue.js?', 'vuejs.org/cdn', '2025-07-22 10:19:27', '2025-07-22 10:19:27', 'https://cdn.vuejs.org/vue.js', 'https://cdn.jsdelivr.net/npm/vue@2', 'https://vue.dev/script.js', 'C'),
 (88, 18, 'What does the v-model directive do?', 'Adds styles', '2025-07-22 10:20:46', '2025-07-22 10:20:46', 'Binds input data', 'Creates a loop', 'Declares a component', 'B'),
@@ -523,7 +552,7 @@ INSERT INTO `questions` (`id`, `quiz_id`, `question_text`, `option_a`, `created_
 (91, 18, 'What is the correct syntax to bind an HTML attribute in Vue?', 'bind:href=\"url\"', '2025-07-22 10:23:48', '2025-07-22 10:23:48', 'v-bind:href=\"url\"', 'href.bind=\"url\"', 'href=\"{{url}}\"', 'B'),
 (92, 18, 'Which lifecycle hook is called after the component is mounted?', 'created()', '2025-07-22 10:24:58', '2025-07-22 10:24:58', 'mounted()', 'beforeMount()', 'init()', 'B'),
 (93, 18, 'How do you define a component in Vue.js?', 'Vue.component()', '2025-07-22 10:25:50', '2025-07-22 10:25:50', 'Vue.newComponent()', 'Vue.addComponent()', 'Vue.define()', 'A'),
-(94, 18, 'What is the data option in a Vue component used for?', 'Store styles', '2025-07-22 10:26:35', '2025-07-22 10:26:35', 'Define methods', 'Store reactive state', 'Handle props', 'C'),
+(94, 18, 'What is the data option in a Vue component used for?', 'Store styles', '2025-07-22 10:26:35', '2025-08-08 08:26:51', 'Define methods', 'Store reactive state', 'Handle props', 'c'),
 (105, 15, 'What does OOP stand for?', 'Objective-Oriented Programming', '2025-07-22 10:39:32', '2025-07-22 10:39:32', 'Object-Oriented Programming', 'Original-Oriented Programming', 'Open Object Programming', 'B'),
 (106, 15, 'Which of the following is not a principle of OOP?', 'Inheritance', '2025-07-22 10:40:23', '2025-07-22 10:40:23', 'Polymorphism', 'Compilation', 'Encapsulation', 'C'),
 (107, 15, 'What is a class in OOP?', 'A function', '2025-07-22 10:43:07', '2025-07-22 10:43:07', 'A blueprint for creating objects', 'A data type', 'A library', 'B'),
@@ -606,7 +635,7 @@ INSERT INTO `quizzes` (`id`, `course_id`, `title`, `description`, `time_limit`, 
 (15, 13, 'final quiz for oop course', NULL, 40, 3, '2025-07-21 05:47:11', '2025-07-21 05:47:11'),
 (16, 14, 'final quiz for laravel course', NULL, 40, 3, '2025-07-21 05:47:34', '2025-07-21 05:47:34'),
 (17, 15, 'final quiz for j-query course', NULL, 40, 3, '2025-07-21 05:47:55', '2025-07-21 05:47:55'),
-(18, 16, 'final quiz for vue.js course', NULL, 40, 3, '2025-07-21 05:48:18', '2025-07-21 05:48:18');
+(18, 16, 'final quiz for vue.js', NULL, 30, 3, '2025-07-21 05:48:18', '2025-08-08 08:18:17');
 
 -- --------------------------------------------------------
 
@@ -645,7 +674,22 @@ INSERT INTO `subscribers` (`id`, `email`, `created_at`, `updated_at`) VALUES
 (2, 'hgfdr@gmail.com', '2025-07-28 13:52:41', '2025-07-28 13:52:41'),
 (3, 'wissal@gmail.com', '2025-07-31 05:41:49', '2025-07-31 05:41:49'),
 (4, 'test@gmail.com', '2025-07-31 06:07:04', '2025-07-31 06:07:04'),
-(5, 'hgg@gmail.com', '2025-07-31 19:24:42', '2025-07-31 19:24:42');
+(5, 'hgg@gmail.com', '2025-07-31 19:24:42', '2025-07-31 19:24:42'),
+(6, 'ytr@gmail.com', '2025-08-01 06:11:20', '2025-08-01 06:11:20'),
+(7, 'admin@gmail.com', '2025-08-01 13:36:43', '2025-08-01 13:36:43'),
+(8, 'jhg@gmail.com', '2025-08-01 13:58:10', '2025-08-01 13:58:10'),
+(9, 'hgf@gmail.com', '2025-08-01 14:07:03', '2025-08-01 14:07:03'),
+(10, 'wissa5@gmail.com', '2025-08-01 14:07:35', '2025-08-01 14:07:35'),
+(11, 'jjhhgh@kkm.kkm', '2025-08-01 14:16:47', '2025-08-01 14:16:47'),
+(12, 'hoghgyg@jhukj.huh', '2025-08-01 14:17:11', '2025-08-01 14:17:11'),
+(14, 'asdf@sdfsd.sd', '2025-08-01 14:24:48', '2025-08-01 14:24:48'),
+(15, 'asdasd@adsasd.asd', '2025-08-01 14:29:53', '2025-08-01 14:29:53'),
+(16, 'jnsfdsjn@sfnslkf.sdfsd', '2025-08-01 14:31:52', '2025-08-01 14:31:52'),
+(17, 'jh@gmail.com', '2025-08-01 14:46:35', '2025-08-01 14:46:35'),
+(18, 'shahed@gmail.com', '2025-08-04 12:45:25', '2025-08-04 12:45:25'),
+(19, 'rr@gmail.com', '2025-08-05 13:37:36', '2025-08-05 13:37:36'),
+(20, 'nn@gmail.com', '2025-08-05 13:46:44', '2025-08-05 13:46:44'),
+(21, 'akkilawissal@gmail.com', '2025-08-06 06:12:21', '2025-08-06 06:12:21');
 
 -- --------------------------------------------------------
 
@@ -672,8 +716,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `role`, `phone`, `profile_image`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(9, 'admin admin', 'admin@gmail.com', 'admin', '125475455', 'profile_images/JYS8URXqciL8f4jVHUMwL2R9WRKfCtFWxXTKlSEe.jpg', NULL, '$2y$12$7yvxkMzliwfq6jLvchGsIu0r9NTHDJa5.rUDveLROnyGL2h8vVW/6', 'GhVNIaKxsHmvWmd8y8H39jfoGojeYDPF8Z5kTHZwzPzWcxRBOC4Dn5xzV9Uo', '2025-07-24 09:45:54', '2025-07-31 07:35:03'),
-(10, 'test', 'test@gmail.com', 'user', '059994921', 'profile_images/6QDcALUXoqD96U2eDXYhLVm3avbm7iYX12dZZZPM.jpg', NULL, '$2y$12$4AmMp4474bQm2LvXKhiqBOxhv8sKVjXxE8Us0I2Ri5wvAtBUwym7m', 'Me9s3McWeNYAkCGo17fH8a8LkaE77FdvrJTabGQebyiCRczhnrPSWYD4kszp', '2025-07-24 09:47:47', '2025-07-31 12:53:47');
+(9, 'admin admin', 'admin@gmail.com', 'admin', '125475455', 'profile_images/XN3SCY5y7R54r6ZmWdMZU53Ppe4WmsPOsHY7RpK5.jpg', NULL, '$2y$12$7yvxkMzliwfq6jLvchGsIu0r9NTHDJa5.rUDveLROnyGL2h8vVW/6', 'LOZvxNOMf3nycjxXAtugTVxBg0obe6bSyDawoOwXA9u3od6iTy4P2rdvW88A', '2025-07-24 09:45:54', '2025-08-04 12:44:08'),
+(10, 'test', 'test@gmail.com', 'user', '059994921', 'profile_images/MD4AiOyriXq9Zkl1DoleJPMUA3HSAiK9xkPPvTPV.png', NULL, '$2y$12$4AmMp4474bQm2LvXKhiqBOxhv8sKVjXxE8Us0I2Ri5wvAtBUwym7m', 'PKLXfMczCYHepXu2ZSS4PxFICsBylUL7ZTUWZezTi26qfw39kjRKfXDQLJJW', '2025-07-24 09:47:47', '2025-08-05 13:47:42');
 
 --
 -- Indexes for dumped tables
@@ -749,6 +793,13 @@ ALTER TABLE `job_batches`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `learning_logs`
+--
+ALTER TABLE `learning_logs`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `learning_logs_user_id_foreign` (`user_id`);
+
+--
 -- Indexes for table `lessons`
 --
 ALTER TABLE `lessons`
@@ -812,31 +863,31 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `completed_courses`
 --
 ALTER TABLE `completed_courses`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 
 --
 -- AUTO_INCREMENT for table `course_results`
 --
 ALTER TABLE `course_results`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `course_user`
 --
 ALTER TABLE `course_user`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -851,40 +902,46 @@ ALTER TABLE `jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `learning_logs`
+--
+ALTER TABLE `learning_logs`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `lessons`
 --
 ALTER TABLE `lessons`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=169;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=174;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=173;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=176;
 
 --
 -- AUTO_INCREMENT for table `quizzes`
 --
 ALTER TABLE `quizzes`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `subscribers`
 --
 ALTER TABLE `subscribers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Constraints for dumped tables
@@ -910,6 +967,12 @@ ALTER TABLE `course_results`
 ALTER TABLE `course_user`
   ADD CONSTRAINT `course_user_course_id_foreign` FOREIGN KEY (`course_id`) REFERENCES `courses` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `course_user_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `learning_logs`
+--
+ALTER TABLE `learning_logs`
+  ADD CONSTRAINT `learning_logs_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `lessons`

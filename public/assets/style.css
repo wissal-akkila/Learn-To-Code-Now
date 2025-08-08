@@ -219,14 +219,20 @@ h1 ,nav-link ,p , .btn, footer , .placeholder,h2 ,h3, .child ,h5 {
 }
 
 
+.plesson{
+    font-family: 'Poppins', sans-serif;
+            font-optical-sizing: auto;
+}
+.lesson{
+    background-color: #0A192F;
+}
 body,
-
 .modal-header,
 .modal-body,
 .modal-body input,
 .navbar,
 .list-group.btn,
-.lesson,
+
 .dropdown,
 .dropdown-menu,
 .dropdown {

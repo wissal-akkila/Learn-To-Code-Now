@@ -39,10 +39,10 @@
                         <div class="tab-pane fade pt-4 {{ $loop->first ? 'show active' : '' }}"
                             id="lesson-{{ $lesson->id }}">
                             <h5 class="fw-bold text-info" >{{ $lesson->title }}</h5>
-                            <p>{!! nl2br(e($lesson->content)) !!}</p>
+                            <p class="plesson">{!! nl2br(e($lesson->content)) !!}</p>
 
                             @if ($lesson->example)
-                                <h6 class=" mt-4 fw-bold">Example:</h6>
+                                <h6 class="plesson mt-4 fw-bold">Example:</h6>
                                 <div
                                     class="text-start text-light p-3 rounded "style="box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.3);">
                                     <code>{{ $lesson->example }}</code>
@@ -50,9 +50,9 @@
                             @endif
 
                             @if ($lesson->example_description)
-                                <p class="text-light mt-4 fw-bold">Example Description:<p>
+                                <p class="text-light mt-4 fw-bold ">Example Description:<p>
                                 <div
-                                    class="text-light text-start  p-3 rounded  "style="box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.3);">
+                                    class="text-light text-start  p-3 rounded plesson  "style="box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.3);">
                                     {{ $lesson->example_description }}
                                 </div>
                             @endif
