@@ -3,10 +3,11 @@
 
 @section('content')
     <div class="containerr d-flex flex-column justify-content-center align-items-center text-center">
-        <h1 class="hover-effect h1" style="color: #0dcaf0;">About Us</h1>
-        <p class="hover-effect">
+        <h1 class=" typewriter text-info" >About Us</h1>
+        <p class=" prgraph mt-5">
             Welcome to our learning hub, where programming becomes exciting,
-            <br> We are a dedicated team committed to providing high-quality
+            <br> 
+            <br>We are a dedicated team committed to providing high-quality
             <br> educational content, helping you build and refine your coding skills—whether
             <br>
         </p>
@@ -18,11 +19,11 @@
         <div class="row justify-content-center d-none d-lg-flex">
             <div class="col-md-3">
                 <div class="card-hover">
-                    <img style="width: 299px; height: 350px;" class="img-fluid card-img-top"
+                    <img style="width: 299px; height: 350px;" class="img-fluid card-img-top imganimated"
                         src="{{asset('images/Adapting SEO for Google AI Overview.jpg')}}" alt="Card image">
                     <div class="card-body" style="background-color: #0A192F;">
-                        <h4 class="card-title text-center pt-3" style="color: #0dcaf0;">Our Vision</h4>
-                        <p class="card-text text-center text-light pt-3">
+                        <h4 class="card-title text-center pt-3 text-info"data-aos="fade-down">Our Vision</h4>
+                        <p class="card-text text-center text-light pt-3"data-aos="fade-down">
                             Programming isn't just about writing code—it’s about creativity and problem-solving...
                         </p>
                     </div>
@@ -30,13 +31,13 @@
             </div>
 
             <div class="col-md-3">
-                <div class="card-hover">
-                    <img style="width: 299px; height: 350px;" class="img-fluid card-img-top"
+                <div class="card-hover ">
+                    <img style="width: 299px; height: 350px;" class="img-fluid card-img-top imganimated"
                         src="{{asset('images/MiniCPM3-4B_ The Open-Source AI Model Taking Scalability to New Heights.jpg')}}"
                         alt="Card image">
                     <div class="card-body" style="background-color: #0A192F;">
-                        <h4 class="card-title text-center pt-3" style="color: #0dcaf0;">What Makes Us Unique?</h4>
-                        <p class="card-text text-center text-light pt-3">
+                        <h4 class="card-title text-center pt-3 text-info"data-aos="fade-down">What Makes Us Unique?</h4>
+                        <p class="card-text text-center text-light pt-3"data-aos="fade-down">
                             Tailored Content for all skill levels, from fundamentals to advanced technologies...
                         </p>
                     </div>
@@ -45,11 +46,11 @@
 
             <div class="col-md-3">
                 <div class="card-hover">
-                    <img style="width: 299px; height: 350px;" class="img-fluid card-img-top"
+                    <img style="width: 299px; height: 350px;" class="img-fluid card-img-top imganimated"
                         src="{{asset('images/JSON Guide_ Web Dev Essentials.jpg')}}" alt="Card image">
                     <div class="card-body" style="background-color: #0A192F;">
-                        <h4 class="card-title text-center pt-3" style="color: #0dcaf0;">What We Offer</h4>
-                        <p class="card-text text-center text-light pt-3">
+                        <h4 class="card-title text-center pt-3 text-info"data-aos="fade-down">What We Offer</h4>
+                        <p class="card-text text-center text-light pt-3"data-aos="fade-down">
                             Comprehensive Courses covering languages like Python, JavaScript...
                         </p>
                     </div>
@@ -67,8 +68,8 @@
                         <img style="width: 100%; height: 350px;" class="img-fluid card-img-top"
                             src="{{asset('images/Adapting SEO for Google AI Overview.jpg')}}" alt="Card image">
                         <div class="card-body" style="background-color: #0A192F;">
-                            <h4 class="card-title text-center pt-3" style="color: #0dcaf0;">Our Vision</h4>
-                            <p class="card-text text-center text-light pt-3">
+                            <h4 class="card-title text-center pt-3 text-info" data-aos="fade-down">Our Vision</h4>
+                            <p class="card-text text-center text-light pt-3" data-aos="fade-down">
                                 Programming isn't just about writing code—it’s about creativity and problem-solving...
                             </p>
                         </div>
@@ -82,8 +83,8 @@
                             src="{{asset('images/MiniCPM3-4B_ The Open-Source AI Model Taking Scalability to New Heights.jpg')}}"
                             alt="Card image">
                         <div class="card-body" style="background-color: #0A192F;">
-                            <h4 class="card-title text-center pt-3" style="color: #0dcaf0;">What Makes Us Unique?</h4>
-                            <p class="card-text text-center text-light pt-3">
+                            <h4 class="card-title text-center pt-3 text-info" data-aos="fade-down">What Makes Us Unique?</h4>
+                            <p class="card-text text-center text-light pt-3" data-aos="fade-down">
                                 Tailored Content for all skill levels, from fundamentals to advanced technologies...
                             </p>
                         </div>
@@ -96,8 +97,8 @@
                         <img style="width: 100%; height: 350px;" class="img-fluid card-img-top"
                             src="{{asset('images/JSON Guide_ Web Dev Essentials.jpg')}}" alt="Card image">
                         <div class="card-body" style="background-color: #0A192F;">
-                            <h4 class="card-title text-center pt-3" style="color: #0dcaf0;">What We Offer</h4>
-                            <p class="card-text text-center text-light pt-3">
+                            <h4 class="card-title text-center pt-3 text-info"  data-aos="fade-down">What We Offer</h4>
+                            <p class="card-text text-center text-light pt-3" data-aos="fade-down">
                                 Comprehensive Courses covering languages like Python, JavaScript...
                             </p>
                         </div>
@@ -127,8 +128,9 @@
 
     <div class="containerRR mt-5 text-center">
         <div class="container">
-            <h2 style="color: #0dcaf0;">Learn To Code Now</h2>
-            <p style="text-align: center;">
+            <h1 class="fw-bold text-info typewriter">Learn To Code Now</h1>
+            <p class=" text-center " 
+     data-aos="zoom-in-up">
                 Learn To Code Now is more than just a learning platform—it's
                 a gateway to a new skill set and a future in tech.<br>
                 Our mission is to make programming education accessible,
@@ -143,17 +145,17 @@
         <!-- الشبكة الأصلية - تظهر فقط على الشاشات الكبيرة -->
         <div class="row d-none d-lg-flex justify-content-center">
             <div class="col-4">
-                <img class="card-hover image-box rounded-3" style="width: 300px;height: 220px;" src="{{asset('images/تنزيل (27).jpg')}}"
+                <img class="card-hover image-box rounded-3" style="width: 300px;height: 220px;" data-aos="flip-left" src="{{asset('images/تنزيل (27).jpg')}}"
                     alt="صورة 1">
             </div>
             <div class="col-4">
                 <img class="card-hover image-box rounded-3" style="width: 300px;height: 220px;"
-                    src="{{asset('images/https___medium_com_@thearticle224_idea-buddy-your-ultimate-tool-for-brainstorming-and-creative-probl.jpg')}}"
+                   data-aos="flip-left" src="{{asset('images/https___medium_com_@thearticle224_idea-buddy-your-ultimate-tool-for-brainstorming-and-creative-probl.jpg')}}"
                     alt="صورة 2">
             </div>
             <div class="col-4">
                 <img class="card-hover image-box rounded-3" style="width: 300px;height: 220px;"
-                    src="{{asset('images/LE DÉVELOPPEMENT FRONT-SCRATCH.jpg')}}" alt="صورة 3">
+                    data-aos="flip-left" src="{{asset('images/LE DÉVELOPPEMENT FRONT-SCRATCH.jpg')}}" alt="صورة 3">
             </div>
         </div>
 

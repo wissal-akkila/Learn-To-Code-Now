@@ -56,7 +56,7 @@
      </div>
 
      <!-- Tests Passed -->
-     <div class="dashbord container rounded-4 mt-5 pt-4 border">
+     <div class="dashbord container rounded-4 mt-5 pt-4 border" >
          <div class="row">
              <div class="col-12">
                  <h3 class="fw-bold text-center">The exams you have taken <span><i class="bi bi-trophy-fill"></i></span></h3>
@@ -103,7 +103,7 @@
      </div>
 
      <!-- Progress and Weekly Review -->
-     <div class="container pb-5">
+     <div class="container pb-5" data-aos="fade-left">
          <div class="d-flex gap-3 mt-5">
              <div class="dashbord rounded-4 pt-4 border w-50">
                  <h4 class="fw-bold text-start ps-4 text-info">Monitoring your progress</h4>

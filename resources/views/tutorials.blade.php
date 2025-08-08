@@ -22,8 +22,8 @@
         }</style>
     <section class="container py-5 tutorial">
            <div class="text-center mb-5">
-        <h1 class="h1 fw-bold text-info" >  <i class="bi bi-book-fill"></i> Our Courses</h1>
-        <p class="text-light">Discover our most popular courses designed by professionals and improve your skills.</p>
+        <h1 class="h1 fw-bold text-info typewriter" >  <i class="bi bi-book-fill"></i> Our Courses</h1>
+        <p class="text-light prgraph">Discover our most popular courses designed by professionals and improve your skills.</p>
     </div>
     <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
@@ -40,7 +40,7 @@
             <div class="carousel-item active">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="card border border-white shadow">
+                        <div class="card border border-white shadow cardcarousel">
                             <div class="image-wrapper">
                                 <img class="card-img-top" src="{{asset('images/html.png')}}" alt="Card image">
                                 <div class="overlay text-center p-3">
@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card border border-white shadow">
+                        <div class="card border border-white shadow cardcarousel">
                             <div class="image-wrapper">
                                 <img class="card-img-top" src="{{asset('images/css.png')}}" alt="Card image">
                                 <div class="overlay  text-center p-3">
@@ -77,7 +77,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card border border-white shadow">
+                        <div class="card border border-white shadow cardcarousel">
                             <div class="image-wrapper">
                                 <img class="card-img-top" src="{{asset('images/c.png')}}" alt="Card image">
                                 <div class="overlay  text-center p-3">
@@ -101,7 +101,7 @@
             <div class="carousel-item">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="card border border-white shadow">
+                        <div class="card border border-white shadow cardcarousel">
                             <div class="image-wrapper">
                                 <img class="card-img-top" src="{{asset('images/php.jpg')}}" alt="Card image">
                                 <div class="overlay  text-center p-3">
@@ -121,7 +121,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card border border-white shadow">
+                        <div class="card border border-white shadow cardcarousel">
                             <div class="image-wrapper">
                                 <img class="card-img-top" src="{{asset('images/bootstrap.png')}}" alt="Card image">
                                 <div class="overlay  text-center p-3">
@@ -143,7 +143,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card border border-white shadow">
+                        <div class="card border border-white shadow cardcarousel">
                             <div class="image-wrapper">
                                 <img class="card-img-top" src="{{asset('images/vue.png')}}" alt="Card image">
                                 <div class="overlay  text-center p-3">
@@ -169,7 +169,7 @@
             <div class="carousel-item">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="card border border-white shadow">
+                        <div class="card border border-white shadow cardcarousel">
                             <div class="image-wrapper">
                                 <img class="card-img-top" src="{{asset('images/python.png')}}" alt="Card image">
                                 <div class="overlay  text-center p-3">
@@ -191,7 +191,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card border border-white shadow">
+                        <div class="card border border-white shadow cardcarousel">
                             <div class="image-wrapper">
                                 <img class="card-img-top" src="{{asset('images/oop.jpg')}}" alt="Card image">
                                 <div class="overlay  text-center p-3">
@@ -211,7 +211,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card border border-white shadow">
+                        <div class="card border border-white shadow cardcarousel">
                             <div class="image-wrapper">
                                 <img class="card-img-top" src="{{asset('images/laravel.png')}}" alt="Card image">
                                 <div class="overlay text-center ">
@@ -237,7 +237,7 @@
             <div class="carousel-item">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="card border border-white shadow">
+                        <div class="card border border-white shadow cardcarousel">
                             <div class="image-wrapper">
                                 <img class="card-img-top" src="{{asset('images/jquery.png')}}" alt="Card image">
                                 <div class="overlay text-center p-3">
@@ -273,7 +273,7 @@
     </div>
 
         <div class="container d-flex justify-content-end mb-3">
-            <a href="{{ route('add-new-lesson') }}" class="btn btn-outline-info">New Tutorials</a>
+            <a href="{{ route('add-new-lesson') }}" class="btn btn-outline-info button">New Tutorials</a>
         </div>
 
     </section>

@@ -5,21 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" contnt="width=device-width, initial-scale=1.0">
     <title>start</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/fonts/css2.css">
-    <link rel="stylesheet" href="./assets/icons/fontawesome-free-6.7.2-web/css/all.min.css">
-    <link rel="stylesheet" href="./assets/icons/bootstrap-icons.css">
-    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/style.css">
+  
+    <link rel="icon" href="{{ asset('images/logo.jpeg') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ asset('assets/icons/fontawesome-free-6.7.2-web/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/icons/bootstrap-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/bootstrap/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/swiper/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/style.css') }}">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            background-color: #0A192F;
-            font-family: 'Poppins', sans-serif;
+      
+ html, body {
+          overflow: hidden;
         }
 
-        .section1 {
+
+      .section1 {
             background-image: url('{{asset('images/test.jpg')}}');
             background-size: cover;
             background-repeat: no-repeat;
@@ -31,7 +37,7 @@
             background-position: 0 -110%;
         }
 
-        .child {
+       .child {
             position: absolute;
             width: 40%;
             height: 100vh;
@@ -48,6 +54,7 @@
                 position: relative;
             }
         }
+     
     </style>
 </head>
 
@@ -60,13 +67,17 @@
                     <div class=" d-flex flex-column justify-content-center h-100  ">
                         <div class="text-center">
 
-                            <img src="{{ asset('images/logo.jpeg') }}" alt="Logo" class="rounded-circle mb-4"
-                                style="width: 130px; height: 130px; object-fit: cover;">
-                            <h1 class="pt-3 mt-4 fw-bold" style="color:#0dcaf0;">Learn To Code Now</h1>
-                            <h4 class="text-light">Start your programming journey</h4>
+                            <img  src="{{ asset('images/logo.jpeg') }}" alt="Logo" class="rounded-circle mb-4 imgs"
+                                style="width: 130px; height: 130px; object-fit: cover;"data-aos="flip-up">
+                                <div>
+
+                                    <h1 class="typewriter  fw-bold  text-info ">Learn To Code Now</h1>       
+                     <h4 class="text-light prgraph ">Start your programming journey</h4>
+                                </div>
+
                 
                                     
-                     <a  href="{{route('home')}}" class="btn btn-outline-info btn-lg text-center fw-bold mt-5 ">Start</a>
+                     <a  href="{{route('home')}}" class="btn btn-outline-info btn-lg text-center fw-bold mt-5 button ">Start</a>
 
 
                         </div>
@@ -78,12 +89,13 @@
 
     </section>
 
->
-    <script src="./assets/jquery/jquery-3.7.1.min.js"></script>
-    <script src="./assets/swiper/swiper-bundle.min.js"></script>
-    <script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="./assets/script.js"></script>
-    <script src="./assets/bootstrap-5.3.6-dist/js/bootstrap.bundle.js"></script>
+><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="{{ asset('assets/jquery/jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ asset('assets/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/bootstrap/bootstrap.bundle.min.js') }}"></script>
+
+    <script src="{{ asset('assets/script.js') }}"></script>
     <script>
         $(".section1 ").mouseenter(function () {
             $("#child ").slideDown();

@@ -1,9 +1,221 @@
-html,
-body {
-    overflow-x: hidden;
+
+
+
+
+
+
+.imgs{
+ 
+
+        animation-name: slide-in-fwd-center;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: none;
+
+        /* shorthand
+		animation: slide-in-fwd-center 1s linear 0s 1 normal none;*/
+    }
+
+    @keyframes slide-in-fwd-center {
+
+        0% {
+            transform: translateZ(-1400px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateZ(0);
+            opacity: 1;
+        }
+    }
+
+.cardcarousel
+{
+      
+
+        animation-name: flip-in-diagonal-tl;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: none;
+
+        /* shorthand
+		animation: flip-in-diagonal-tl 1s linear 0s 1 normal none;*/
+    }
+
+    @keyframes flip-in-diagonal-tl {
+
+        0% {
+            transform: rotate3d(-1, 1, 0, 80deg);
+            opacity: 0;
+        }
+
+        100% {
+            transform: rotate3d(1, 1, 0, 0deg);
+            opacity: 1;
+        }
+    }
+
+
+
+.imganimated{
+     
+
+        animation-name: flip-in-horizontal;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: none;
+
+        /* shorthand
+		animation: flip-in-horizontal 1s linear 0s 1 normal none;*/
+    }
+
+    @keyframes flip-in-horizontal {
+
+        0% {
+            transform: rotateX(-80deg);
+            opacity: 0;
+        }
+
+        100% {
+            transform: rotateX(0);
+            opacity: 1;
+        }
+    }
+/* ------------------------------------- */
+/* انميشن الفقرات */
+
+.prgraph {
+        
+        font-weight: bold;
+        font-size: 20px;
+
+        animation-name: text-focus-in;
+        animation-duration: 1.2s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: none;
+
+        /* shorthand
+		animation: text-focus-in 1.2s linear 0s 1 normal none;*/
+    }
+
+    @keyframes text-focus-in {
+
+        0% {
+            filter: blur(12px);
+            opacity: 0;
+        }
+
+        100% {
+            filter: blur(0);
+            opacity: 1;
+        }
+    }
+
+/* ---------------------------------------- */
+/* انميشن الزر */
+.button{
+       
+      
+
+        animation-name: slit-in-horizontal;
+        animation-duration: 0.8s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: none;
+
+        /* shorthand
+		animation: slit-in-horizontal 0.2s linear 0s 1 normal none;*/
+    }
+
+    @keyframes slit-in-horizontal {
+
+        0% {
+            transform: translateZ(-800px) rotateX(90deg);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translateZ(-160px) rotateX(87deg);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateZ(0) rotateX(0);
+        }
+    }
+/* ------------------------------- */
+/* انميشن العناوين */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 4s steps(30, end) forwards;
+    border-right: none;
+    /* لا يوجد مؤشر */
+    font-size: 24px;
+    font-weight: bold;
+    color: #0dcaf0;
 }
 
 
+
+
+
+
+
+.animated-text {
+    color: white;
+    font-weight: bold;
+    font-size: 25px !important;
+    animation: focus-in-contract 1.2s ease-out 0s 1 normal both;
+}
+
+@keyframes focus-in-contract {
+    0% {
+        letter-spacing: 1em;
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        letter-spacing: normal;
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+
+
+h1 ,nav-link ,p , .btn, footer , .placeholder,h2 ,h3, .child ,h5 {
+    font-family: "Playwrite AU QLD", cursive;
+        font-optical-sizing: auto;
+        font-weight: 400;
+     
+}
 
 
 body,
@@ -18,7 +230,8 @@ body,
 .dropdown-menu,
 .dropdown {
     background-color: #0A192F;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: "Playwrite AU QLD", cursive;
 
 }
 .shadow-divider {
@@ -86,10 +299,7 @@ body,
 
 }
 
-.btn-outline-info:hover,
-.child .text-info:hover {
-    color: #0A192F !important;
-}
+
 
 .white-shadow {
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.6);

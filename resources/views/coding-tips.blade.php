@@ -7,7 +7,7 @@
         <!-- Swiper Section (Left) -->
         <div style="    max-width: 260px;">
 
-            <div class="swiper swiper-tips tipsSwiper ">
+            <div class="swiper swiper-tips tipsSwiper "data-aos="fade-right">
                 <!-- أضف class swiper -->
                 <div class="swiper-wrapper">
                     <div class="swiper-slide swiper-tips-slide">
@@ -61,8 +61,8 @@
 
         
         <div class="text-section o">
-            <h2 class="fw-bold text-info " >  <i class="bi bi-lightbulb-fill"></i>Coding Tips</h2>
-            <p>Explore helpful tips to enhance your coding journey. Swipe through the cards to discover advice that will
+            <h1 class="fw-bold text-info typewriter " >  <i class="bi bi-lightbulb-fill"></i>Coding Tips</h1>
+            <p class="mt-5 prgraph">Explore helpful tips to enhance your coding journey. Swipe through the cards to discover advice that will
                 boost your learning and development process.</p>
         </div>
     </div>
