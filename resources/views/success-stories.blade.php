@@ -50,6 +50,23 @@
             transform: scale(1.05);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
+
+        @media (max-width: 991.98px) { /* شاشات صغيرة ومتوسطة */
+  #v-pills-tab .nav-link {
+    margin-bottom: 0.25rem !important;  /* مسافة رأسية أقل */
+    margin-right: 0.25rem !important;   /* مسافة أفقية أقل */
+  }
+}
+@media (max-width: 767.98px) {
+  .nav-pills .nav-link.active img {
+    transform: scale(1.0); /* أو حجم أصغر */
+    border: 0.5px solid #0dcaf0; /* مثلا أقل سمك */
+  }
+
+  .nav-pills .nav-link:hover img {
+    transform: scale(1.02); /* تحجيم أقل على hover */
+  }
+}
     </style>
 
 
@@ -64,24 +81,24 @@
                 <div class="row">
 
                     <!-- التابات الجانبية -->
-                    <div class="col-md-2">
-                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                            <button class="nav-link active mb-3" id="tab1-tab" data-bs-toggle="pill"
+                    <div class="col-12 col-md-2">
+                        <div class="nav nav-pills d-flex flex-wrap flex-md-column justify-content-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <button class="nav-link active mb-2 mb-md-3" id="tab1-tab" data-bs-toggle="pill"
                                 data-bs-target="#tab1"data-aos="zoom-in-right" data-aos-delay="0" data-aos-duration="1000"
                                 type="button" role="tab">
                                 <img src="{{ asset('images/Linus Torvalds.jpeg') }}" alt="Tab 1">
                             </button>
-                            <button class="nav-link mb-3" id="tab2-tab" data-bs-toggle="pill" data-bs-target="#tab2"
+                            <button class="nav-link mb-2 mb-md-3" id="tab2-tab" data-bs-toggle="pill" data-bs-target="#tab2"
                                 type="button" role="tab"data-aos="zoom-in-right" data-aos-delay="200"
                                 data-aos-duration="1000">
                                 <img src="{{ asset('images/Guido van Rossum.png') }}" alt="Tab 2">
                             </button>
-                            <button class="nav-link mb-3" id="tab3-tab" data-bs-toggle="pill" data-bs-target="#tab3"
+                            <button class="nav-link mb-2 mb-md-3 " id="tab3-tab" data-bs-toggle="pill" data-bs-target="#tab3"
                                 type="button" role="tab"data-aos="zoom-in-right" data-aos-delay="400"
                                 data-aos-duration="1000">
                                 <img src="{{ asset('images/Brian Kernighan.jpeg') }}" alt="Tab 3">
                             </button>
-                            <button class="nav-link mb-3" id="tab4-tab" data-bs-toggle="pill" data-bs-target="#tab4"
+                            <button class="nav-link mb-2 mb-md-3" id="tab4-tab" data-bs-toggle="pill" data-bs-target="#tab4"
                                 type="button" role="tab"data-aos="zoom-in-right" data-aos-delay="600"
                                 data-aos-duration="1000">
                                 <img src="{{ asset('images/Margaret Hamilton.jpg') }}" alt="Tab 4">
