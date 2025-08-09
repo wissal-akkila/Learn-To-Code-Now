@@ -149,7 +149,7 @@
                             <i class="  bi bi-code-slash fa-lg text-info " aria-hidden="true"></i>
                         </div>
                         <div>
-                            <h5 class="h m-0 text-info fw-bold">Code Examples</h5>
+                            <h5 class=" m-0 text-info fw-bold">Code Examples</h5>
                         </div>
 
                     </div>
