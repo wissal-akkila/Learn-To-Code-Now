@@ -137,7 +137,7 @@
                             <i class=" bi bi-book fa-lg text-info " aria-hidden=" true"></i>
                         </div>
                         <div>
-                            <h5 class="h m-0 text-info fw-bold"> Detailed Lessons</h5>
+                            <p class="h m-0 text-info fw-bold"> Detailed Lessons</p>
                         </div>
 
                     </div>
