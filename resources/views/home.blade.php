@@ -53,7 +53,7 @@
     <div class="shadow-divider"></div>
 
     <div class="container mt-5">
-      <div class="row mt-5 d-none d-lg-flex justify-between">
+      <div class="row mt-5 d-none d-lg-flex align-items-center ">
     <div class="col-lg-6 mt-5">
         <div class="row">
             <div class="col-6">
@@ -104,10 +104,11 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-6"style="height: 100%;">
         <img src="{{ asset('images/home image 1 (4).jpeg') }}" class="img-fluid w-100 mt-5" data-aos="fade-left" data-aos-anchor="#example-anchor"
-            data-aos-offset="500" data-aos-duration="500" alt="">
+            data-aos-offset="500" data-aos-duration="500" alt=""style="height: 100%; object-fit: cover;">
     </div>
+</div>
 </div>
 
         {{-- -------------------------------------------- --}}
