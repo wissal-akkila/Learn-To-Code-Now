@@ -23,7 +23,31 @@
  html, body {
           overflow: hidden;
         }
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
+body {
+  background: linear-gradient(
+    270deg,
+    #0A192F,    /* كحلي غامق جدا */
+    #54858f,    /* أزرق info داكن */
+    #353e4d,    /* سكني داكن */
+   
+   #0A192F
+  );
+  background-size: 800% 800%;
+  animation: gradientMove 20s ease infinite;
+  color: white;
+}
 
       .section1 {
             background-image: url('{{asset('images/test.jpg')}}');
