@@ -51,7 +51,7 @@
 
     {{-- -------------------------------------------------------------- --}}
     <div class="shadow-divider"></div>
-
+<h1>jhytrertyui</h1>
     <div class="container mt-5">
         <div class="row mt-5 d-none d-lg-flex ">
             <div class="col-lg-6 d-none d-lg-flex mt-5  ">
