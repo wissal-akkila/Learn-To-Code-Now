@@ -51,75 +51,64 @@
 
     {{-- -------------------------------------------------------------- --}}
     <div class="shadow-divider"></div>
-<h1>jhytrertyui</h1>
+
     <div class="container mt-5">
-        <div class="row mt-5 d-none d-lg-flex ">
-            <div class="col-lg-6 d-none d-lg-flex mt-5  ">
-
-                <div class="row ">
-                    <div class="col-6">
-                        <div class="d-flex mt-md-5 align-items-sm-center gap-2 mb-3 "data-aos="zoom-out">
-                            <div><i class="bi bi-journal-richtext text-info fa-2x" aria-hidden="true"></i></div>
-                            <div>
-                                <h3 class="h m-0 text-info fw-bold"> Diverse
-                                    Courses</h3>
-                            </div>
-
-                        </div>
-                        <p class="text-white"data-aos="zoom-out-up">We offer a wide range of programming courses tailored to
-                            all levels</p>
-                    </div>
-                    <div class="col-6">
-                        <div class="d-flex mt-md-5 align-items-sm-center gap-2 mb-3 "data-aos="zoom-out">
-                            <div><i class=" bi bi-book fa-2x text-info " aria-hidden=" true"></i>
-                            </div>
-                            <div>
-                                <h3 class="h m-0 text-info fw-bold"> Detailed Lessons</h3>
-                            </div>
-
-                        </div>
-                        <p class="text-white"data-aos="zoom-out-up">Each topic is clearly explained with step-by-step
-                            guidance</p>
+      <div class="row mt-5 d-none d-lg-flex">
+    <div class="col-lg-6 mt-5">
+        <div class="row">
+            <div class="col-6">
+                <div class="d-flex mt-md-5 align-items-center gap-2 mb-3" data-aos="zoom-out">
+                    <div><i class="bi bi-journal-richtext text-info fa-2x" aria-hidden="true"></i></div>
+                    <div>
+                        <h3 class="m-0 text-info fw-bold">Diverse Courses</h3>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-6">
-                        <div class="d-flex mt-md-5 align-items-sm-center gap-2 mb-3 "data-aos="zoom-out">
-                            <div><i class="  bi bi-code-slash fa-2x text-info " aria-hidden="true"></i></div>
-                            <div>
-                                <h3 class="h m-0 text-info fw-bold">Code Examples</h3>
-                            </div>
-
-                        </div>
-                        <p class=" text-white"data-aos="zoom-out-up">
-                            Every concept comes with real-world coding examples for better understanding
-                        </p>
-                    </div>
-                    <div class="col-6">
-                        <div class="d-flex mt-md-5 align-items-sm-center gap-2 mb-3"data-aos="zoom-out">
-                            <div><i class="bi bi-clipboard-check fa-2x text-info " aria-hidden="true"></i>
-                            </div>
-                            <div>
-                                <h3 class="h m-0 text-info fw-bold">Practice Quizzes</h3>
-                            </div>
-
-                        </div>
-                        <p class=" text-white"data-aos="zoom-out-up">
-                            Test your knowledge with interactive quizzes after each section
-                        </p>
-                    </div>
-                </div>
-
-
-
+                <p class="text-white" data-aos="zoom-out-up">
+                    We offer a wide range of programming courses tailored to all levels
+                </p>
             </div>
-            <div class="col-md-6">
-
-                <img src="{{ asset('images/home image 1 (4).jpeg') }}"data-aos="fade-left" data-aos-anchor="#example-anchor"
-                    data-aos-offset="500" data-aos-duration="500" alt="">
-
+            <div class="col-6">
+                <div class="d-flex mt-md-5 align-items-center gap-2 mb-3" data-aos="zoom-out">
+                    <div><i class="bi bi-book fa-2x text-info" aria-hidden="true"></i></div>
+                    <div>
+                        <h3 class="m-0 text-info fw-bold">Detailed Lessons</h3>
+                    </div>
+                </div>
+                <p class="text-white" data-aos="zoom-out-up">
+                    Each topic is clearly explained with step-by-step guidance
+                </p>
             </div>
         </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="d-flex mt-md-5 align-items-center gap-2 mb-3" data-aos="zoom-out">
+                    <div><i class="bi bi-code-slash fa-2x text-info" aria-hidden="true"></i></div>
+                    <div>
+                        <h3 class="m-0 text-info fw-bold">Code Examples</h3>
+                    </div>
+                </div>
+                <p class="text-white" data-aos="zoom-out-up">
+                    Every concept comes with real-world coding examples for better understanding
+                </p>
+            </div>
+            <div class="col-6">
+                <div class="d-flex mt-md-5 align-items-center gap-2 mb-3" data-aos="zoom-out">
+                    <div><i class="bi bi-clipboard-check fa-2x text-info" aria-hidden="true"></i></div>
+                    <div>
+                        <h3 class="m-0 text-info fw-bold">Practice Quizzes</h3>
+                    </div>
+                </div>
+                <p class="text-white" data-aos="zoom-out-up">
+                    Test your knowledge with interactive quizzes after each section
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <img src="{{ asset('images/home image 1 (4).jpeg') }}" data-aos="fade-left" data-aos-anchor="#example-anchor"
+            data-aos-offset="500" data-aos-duration="500" alt="">
+    </div>
+</div>
 
         {{-- -------------------------------------------- --}}
         {{-- قائمة تظهرللشاشات المتوسطة والصغيرة --}}
@@ -193,7 +182,7 @@
         <h1 class="display-6 text-center text-light pt-3 fw-bold"data-aos="zoom-in-up">learn at your own pace from anywhere
         </h1>
 
-        <div class="swiper mySwiper pt-5">
+        <div class="swiper mySwiper pt-5"data-aos="flip-down">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="card-hover text-center p-3 border border-secondary rounded">
