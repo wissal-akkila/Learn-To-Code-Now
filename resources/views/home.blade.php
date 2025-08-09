@@ -60,7 +60,7 @@
                 <div class="d-flex mt-md-5 align-items-center gap-2 mb-3" data-aos="zoom-out">
                     <div><i class="bi bi-journal-richtext text-info fa-2x" aria-hidden="true"></i></div>
                     <div>
-                        <h3 class="m-0 text-info fw-bold">Diverse Courses</h3>
+                        <h5 class="m-0 text-info fw-bold">Diverse Courses</h5>
                     </div>
                 </div>
                 <p class="text-white" data-aos="zoom-out-up">
@@ -71,7 +71,7 @@
                 <div class="d-flex mt-md-5 align-items-center gap-2 mb-3" data-aos="zoom-out">
                     <div><i class="bi bi-book fa-2x text-info" aria-hidden="true"></i></div>
                     <div>
-                        <h3 class="m-0 text-info fw-bold">Detailed Lessons</h3>
+                        <h5 class="m-0 text-info fw-bold">Detailed Lessons</h5>
                     </div>
                 </div>
                 <p class="text-white" data-aos="zoom-out-up">
@@ -84,7 +84,7 @@
                 <div class="d-flex mt-md-5 align-items-center gap-2 mb-3" data-aos="zoom-out">
                     <div><i class="bi bi-code-slash fa-2x text-info" aria-hidden="true"></i></div>
                     <div>
-                        <h3 class="m-0 text-info fw-bold">Code Examples</h3>
+                        <h5 class="m-0 text-info fw-bold">Code Examples</h5>
                     </div>
                 </div>
                 <p class="text-white" data-aos="zoom-out-up">
@@ -95,7 +95,7 @@
                 <div class="d-flex mt-md-5 align-items-center gap-2 mb-3" data-aos="zoom-out">
                     <div><i class="bi bi-clipboard-check fa-2x text-info" aria-hidden="true"></i></div>
                     <div>
-                        <h3 class="m-0 text-info fw-bold">Practice Quizzes</h3>
+                        <h5 class="m-0 text-info fw-bold">Practice Quizzes</h5>
                     </div>
                 </div>
                 <p class="text-white" data-aos="zoom-out-up">
@@ -137,7 +137,7 @@
                             <i class=" bi bi-book fa-lg text-info " aria-hidden=" true"></i>
                         </div>
                         <div>
-                            <p class="h m-0 text-info fw-bold"> Detailed Lessons</p>
+                            <h5 class="h m-0 text-info fw-bold"> Detailed Lessons</h5>
                         </div>
 
                     </div>
