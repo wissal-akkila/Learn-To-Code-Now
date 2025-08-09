@@ -27,7 +27,16 @@
     <!-- Scripts -->
 
 </head>
-
+<style>
+    .nav-dropdown {
+ position: relative;
+    z-index: 9999;
+}
+header, .navbar {
+    position: relative;
+    z-index: 10000;
+}
+</style>
 <body class="font-sans antialiased">
 
     {{-- ✅ شرط إظهار الشريط العلوي فقط إذا كان المستخدم مسجلاً الدخول --}}
@@ -113,12 +122,12 @@
                 <i class="fa-solid fa-arrow-right"></i>
             </a>
         @else
-            <div class="hidden sm:flex items-center justify-end ms-auto">
+            <div class=" sm:flex items-center justify-end ms-auto nav-dropdown">
                 <x-dropdown align="right" width="60">
                     <x-slot name="trigger">
                         <button
                             class="inline-flex items-center px-4 py-2 border text-sm leading-4 font-medium rounded-lg text-white transition ease-in-out duration-150"
-                            style="background-color:#0A192F; border-color:#0A192F; width: 180px; justify-content: space-between;"
+                            style="background-color:#0A192F; border-color:#0A192F; width: 180px; justify-content: space-between; "
                             onmouseover="this.style.backgroundColor='#0dcaf0'"
                             onmouseout="this.style.backgroundColor='#0A192F'">>
 

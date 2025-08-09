@@ -28,6 +28,7 @@
       .section1 {
             background-image: url('{{asset('images/test.jpg')}}');
             background-size: cover;
+            background-position: center top;
             background-repeat: no-repeat;
 
             position: relative;
@@ -54,16 +55,39 @@
                 position: relative;
             }
         }
-     
+        /* ------------------------------------------------------ */
+   .t{
+    animation-name: text-focus-in;
+		animation-duration: 1.2s;
+		animation-timing-function: linear;
+		animation-delay: 0s;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-fill-mode: none;
+			
+		/* shorthand
+		animation: text-focus-in 1.2s linear 0s 1 normal none;*/
+	}
+	@keyframes text-focus-in {
+			
+		0% {
+			filter:blur(12px);
+			opacity:0;
+		}
+		100% {
+			filter:blur(0);
+			opacity:1;
+		}
+   }
     </style>
 </head>
 
 <body>
-    <section>
+    <section class="d-none d-lg-block">
         <div class=" row g-0 ">
 
-            <div class="section1 " id="section1">
-                <div class="child   " id="child">
+            <div class="section1  " id="section1">
+                <div class="child    " id="child">
                     <div class=" d-flex flex-column justify-content-center h-100  ">
                         <div class="text-center">
 
@@ -88,7 +112,19 @@
             </div>
 
     </section>
+<div class="container d-block d-lg-none d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+    <div class="text-center">
+         <img  src="{{ asset('images/logo.jpeg') }}" alt="Logo" class="rounded-circle mb-4 imgs"
+                                style="width: 300px; height: 300px; object-fit: cover;"data-aos="flip-up">
+ <div>
 
+                                    <h1 class="fw-bold  text-info mt-5 "data-aos="zoom-in">Learn To Code Now</h1>       
+                     <h2 class="t text-light mt-3 ">Start your programming journey</h2>
+                                </div>
+                                   <a  href="{{route('home')}}" class="btn btn-outline-info btn-lg text-center fw-bold mt-5 w-50 button ">Start</a>
+    </div>
+</div>
+   
 ><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="{{ asset('assets/jquery/jquery-3.7.1.min.js') }}"></script>
