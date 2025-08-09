@@ -11,19 +11,19 @@
             <div class="row text-center gy-5">
                 <div class="col-12 col-sm-6 col-md-4  ">
                     <img src="{{asset('images/locai-removebg-preview.png')}}" class="img-fluid hover-image mb-3 imganimated " style="max-width: 220px;">
-                    <h5 class="h5-contact animated-text mt-3">Location</h5>
+                    <p class="h5-contact animated-text mt-3">Location</p>
                     <p class="hover-text animated-text">Gaza - Palestine</p>
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4">
                     <img src="{{asset('images/contat-removebg-preview.png')}}" class="img-fluid hover-image mb-3 imganimated " style="max-width: 220px;">
-                    <h5 class="h5-contact animated-text mt-3">Phone</h5>
+                    <p class="h5-contact animated-text mt-3">Phone</p>
                     <p class="hover-text animated-text ">+972598491190</p>
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 mx-auto">
                     <img src="{{asset('images/email-removebg-preview.png')}}" class="img-fluid hover-image mb-3 imganimated " style="max-width: 220px;">
-                    <h5 class="h5-contact animated-text mt-3">Email</h5>
+                    <p class="h5-contact animated-text mt-3">Email</p>
                     <p class="hover-text  animated-text">learntocodenow@gmail.com</p>
                 </div>
             </div>
