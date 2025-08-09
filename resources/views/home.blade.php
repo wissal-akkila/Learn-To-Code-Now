@@ -105,7 +105,7 @@
         </div>
     </div>
     <div class="col-lg-6">
-        <img src="{{ asset('images/home image 1 (4).jpeg') }}" class="img-fluid w-100"data-aos="fade-left" data-aos-anchor="#example-anchor"
+        <img src="{{ asset('images/home image 1 (4).jpeg') }}" class="img-fluid w-100 mt-5" data-aos="fade-left" data-aos-anchor="#example-anchor"
             data-aos-offset="500" data-aos-duration="500" alt="">
     </div>
 </div>
