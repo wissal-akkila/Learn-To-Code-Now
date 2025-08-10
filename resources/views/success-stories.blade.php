@@ -265,6 +265,11 @@
 
 
 
+<script>
+    AOS.init({
+        once: true // يشغل الأنميشن مرة واحدة فقط
+    });
+</script>
 
 
     @endsection
