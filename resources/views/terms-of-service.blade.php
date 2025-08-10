@@ -3,8 +3,8 @@
 
 @section('content')
 <div class="container py-5">
-    <h2 >Terms of Service</h2>
-    <p>By using Learn to Code Now, you agree to the following terms and conditions.</p>
+    <h3 class="fw-bold text-info"  >  <i class="fas fa-file-contract"></i> Terms of Service</h3>
+    <p class="mt-5">By using Learn to Code Now, you agree to the following terms and conditions.</p>
 
     <h5 class="fw-bold text-light">Use of Website</h5>
     <p>You may use this platform for learning purposes only. Any misuse or unauthorized activity is strictly prohibited.</p>

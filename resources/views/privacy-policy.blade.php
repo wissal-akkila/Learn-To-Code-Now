@@ -3,8 +3,8 @@
 
 @section('content')
 <div class="container py-5">
-    <h2 class="fw-bold">Privacy Policy</h2>
-    <p>At Learn to Code Now, we respect your privacy and are committed to protecting your personal information.</p>
+    <h3 class="fw-bold text-info">  <i class="fas fa-user-shield"></i>  Privacy Policy</h3>
+    <p class="mt-5">At Learn to Code Now, we respect your privacy and are committed to protecting your personal information.</p>
 
     <h5 class="fw-bold text-light">What We Collect</h5>
     <p>We may collect your name, email address, and usage data when you interact with our platform.</p>
