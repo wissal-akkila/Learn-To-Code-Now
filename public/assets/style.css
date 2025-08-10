@@ -441,11 +441,11 @@ footer a:hover,
 .carousel-control-prev,
 .carousel-control-next {
     width: auto;
-    /* اختياري */
+ 
     margin-left: 10px;
-    /* لزر السابق */
+   
     margin-right: 10px;
-    /* لزر التالي */
+ 
 }
 
 

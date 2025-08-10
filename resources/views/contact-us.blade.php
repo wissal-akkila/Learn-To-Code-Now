@@ -7,6 +7,7 @@
     <h1 class="text-center text-info fw-bold typewriter mt-5 " >   <i class="bi bi-telephone-fill"></i>    Contact Us</h1>
     <p class="text-center prgraph">Want to know more? Or need assistance? Get in touch with us now! We love hearing from you and will be happy to help</p>
 </div>
+ 
         <section class="container mt-5">
             <div class="row text-center gy-5">
                 <div class="col-12 col-sm-6 col-md-4  ">
@@ -28,7 +29,7 @@
                 </div>
             </div>
         </section>
-
+<div class="shadow-divider"></div>
         <div class="container">
             @if(session('success'))
                 <div class="alert alert-success text-center">

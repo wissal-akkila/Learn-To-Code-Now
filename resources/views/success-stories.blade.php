@@ -75,7 +75,7 @@
     <div class="container text-center">
         <h1 class=" typewriter text-center text-info fw-bold  mt-3 ">Success Stories</h1>
         <p class="text-center prgraph">The four most prominent and brilliant names in the world of programming ✨✨</p>
-
+<div class="shadow-divider"></div>
         <div>
             <div class="container mt-4 ">
                 <div class="row">

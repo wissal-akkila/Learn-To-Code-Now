@@ -60,7 +60,7 @@
 
 
         
-        <div class="text-section o">
+        <div class="text-section ">
             <h1 class="fw-bold text-info typewriter " >  <i class="bi bi-lightbulb-fill"></i>Coding Tips</h1>
             <p class="mt-5 prgraph">Explore helpful tips to enhance your coding journey. Swipe through the cards to discover advice that will
                 boost your learning and development process.</p>

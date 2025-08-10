@@ -66,28 +66,7 @@ var swiper = new Swiper(".mySwiper", {
     }
 });
 
-// صفحة ال tutoorial
 
-// $(document).ready(function () {
-//     $('.card').on('mouseenter', function () {
-//         $(this).find('.language-label').fadeIn(200);
-//     });
-
-//     $('.card').on('mouseleave', function () {
-//         $(this).find('.language-label').fadeOut(200);
-//     });
-// });
-
-// add-lesson
-// $(document).ready(function () {
-//     $('.card').on('mouseenter', function () {
-//         $(this).find('.language-label').fadeIn(200);
-//     });
-
-//     $('.card').on('mouseleave', function () {
-//         $(this).find('.language-label').fadeOut(200);
-//     });
-// });
 // ****لاضافة الدرس الى صفحة الداش بورد
 function saveCourseToLocalStorageFromCard(button) {
     // إيجاد العنصر الأعلى بطاقة الكورس
