@@ -3,6 +3,7 @@
 
  @section('content')
 
+
      <!-- My Courses -->
      <div class="container">
          @if (session('success'))

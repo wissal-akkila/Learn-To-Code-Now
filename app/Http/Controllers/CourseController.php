@@ -68,16 +68,19 @@ class CourseController extends Controller
         // التحقق إذا لم يكن الكورس مضافًا مسبقًا
    if (! $user->courses->contains($courseId)) {
     $user->courses()->attach($courseId);
-    return redirect()->back()->with('success', 'Course added to your courses.');
-} else {
+    
+    return redirect()->route('dashboard')->with('success', 'Course added to your courses.');
+}
+ else
+     {
     return redirect()->back()->with('error', 'The course has already been added.');
 }
     }
-    public function tutorials()
-    {
-        $courses = Course::all();
-        return view('new-tutorials', compact('courses'));
-    }
+    // public function tutorials()
+    // {
+    //     $courses = Course::all();
+    //     return view('new-tutorials', compact('courses'));
+    // }
     public function showLessons()
     {
         $courses = Course::all();

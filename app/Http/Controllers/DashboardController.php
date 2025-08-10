@@ -65,6 +65,7 @@ $learningHours = round($totalSeconds / 3600, 2);
 
 
 // ----------------------------------------------------
+// التقييم 
 $passedTestsCount = $user->courseResults->where('score', '>=', 5)->count();
 
 if ($passedTestsCount < 3) {

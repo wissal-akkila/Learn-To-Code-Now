@@ -20,20 +20,20 @@
             <div class="row text-center gy-5">
                 <div class="col-12 col-sm-6 col-md-4  ">
                     <img src="{{asset('images/locai-removebg-preview.png')}}" class="img-fluid hover-image mb-3 imganimated " style="max-width: 220px;">
-                    <p class="h5-contact animated-text mt-3">Location</p>
-                    <p class="hover-text animated-text">Gaza - Palestine</p>
+                    <p class="h5-contact  mt-3"data-aos="zoom-in">Location</p>
+                    <p class="hover-text "data-aos="zoom-in">Gaza - Palestine</p>
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4">
                     <img src="{{asset('images/contat-removebg-preview.png')}}" class="img-fluid hover-image mb-3 imganimated " style="max-width: 220px;">
-                    <p class="h5-contact animated-text mt-3">Phone</p>
-                    <p class="hover-text animated-text ">+972598491190</p>
+                    <p class="h5-contact  mt-3"data-aos="zoom-in">Phone</p>
+                    <p class="hover-text  "data-aos="zoom-in">+972598491190</p>
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 mx-auto">
                     <img src="{{asset('images/email-removebg-preview.png')}}" class="img-fluid hover-image mb-3 imganimated " style="max-width: 220px;">
-                    <p class="h5-contact animated-text mt-3">Email</p>
-                    <p class="hover-text  animated-text">learntocodenow@gmail.com</p>
+                    <p class="h5-contact  mt-3"data-aos="zoom-in">Email</p>
+                    <p class="hover-text"  data-aos="zoom-in">learntocodenow29@gmail.com</p>
                 </div>
             </div>
         </section>

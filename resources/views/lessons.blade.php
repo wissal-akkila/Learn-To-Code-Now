@@ -2,6 +2,11 @@
 @section('title', 'lessons')
 
 @section('content')
+
+
+
+
+
     <div class="container text-center">
         <h1 class="text-light fw-bold">{{ $course->title }}</h1>
         <p class="text-light">{{ $course->description }}</p>

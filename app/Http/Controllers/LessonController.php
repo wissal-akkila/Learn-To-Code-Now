@@ -62,6 +62,8 @@ class LessonController extends Controller
             return redirect()->route('dashboard')->with('success', 'Lesson marked as completed!');
 
         } else {
+          
+
             return redirect()->back()->with('info', 'already Lesson marked as completed!');
 
         }
