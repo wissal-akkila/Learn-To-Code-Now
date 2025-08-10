@@ -231,7 +231,7 @@
                                             Hamilton</h1>
                                     </div>
                                     <div class="mt-5">
-                                        <h5 class="fw-bold text-info text-start ">Who is he?</h5>
+                                        <h5 class="fw-bold text-info text-start ">Who is she?</h5>
                                         <br>
                                         <p class="text-start mt-2"data-aos="zoom-in">
                                             An American computer scientist who led the software development team for NASA's
