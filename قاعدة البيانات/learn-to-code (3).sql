@@ -149,7 +149,7 @@ INSERT INTO `courses` (`id`, `title`, `slug`, `description`, `image`, `status`, 
 (14, 'Laravel', 'laravel', 'PHP web framework for building modern, robust, and secure web applications', NULL, 'in_progress', '2025-07-19 13:14:38', '2025-07-20 01:22:51'),
 (15, 'jQuery', 'jquery', 'JavaScript library that simplifies DOM manipulation and AJAX calls', NULL, 'in_progress', '2025-07-19 13:14:55', '2025-07-20 01:22:51'),
 (16, 'Vue.js', 'vuejs', 'Progressive JavaScript framework for building interactive user interfaces', NULL, 'in_progress', '2025-07-19 13:15:13', '2025-07-20 01:22:51'),
-(68, 'widssa', 'ryan', 'oiuygtf', NULL, 'in_progress', '2025-08-06 06:38:55', '2025-08-08 08:17:50');
+
 
 -- --------------------------------------------------------
 
@@ -417,7 +417,7 @@ INSERT INTO `lessons` (`id`, `course_id`, `title`, `content`, `example`, `slug`,
 (150, 16, 'Creating Components', 'Vue allows reusable UI blocks through components.', '<div id=\"app\">\r\n  <greeting></greeting>\r\n</div>\r\n\r\n<script>\r\n  const Greeting = {\r\n    template: \'<h2>Hello from the component!</h2>\'\r\n  };\r\n\r\n  const app = Vue.createApp({});\r\n  app.component(\'greeting\', Greeting);\r\n  app.mount(\'#app\');\r\n</script>', NULL, '2025-07-22 10:06:54', '2025-07-22 10:06:54', 'We created a greeting component and used it in the main app.', NULL),
 (151, 16, 'Passing Data to Components with props', 'Props allow the parent component to send data to the child.', '<div id=\"app\">\r\n  <greeting name=\"John\"></greeting>\r\n</div>\r\n\r\n<script>\r\n  const Greeting = {\r\n    props: [\'name\'],\r\n    template: \'<p>Hello, {{ name }}!</p>\'\r\n  };\r\n\r\n  const app = Vue.createApp({});\r\n  app.component(\'greeting\', Greeting);\r\n  app.mount(\'#app\');\r\n</script>', NULL, '2025-07-22 10:07:54', '2025-07-22 10:07:54', 'The name prop is passed from the parent and rendered inside the child component.', NULL),
 (152, 16, 'Handling Form Submission', 'Vue can handle forms easily using v-model and @submit.prevent.', '<div id=\"app\">\r\n  <form @submit.prevent=\"handleSubmit\">\r\n    <input v-model=\"email\" placeholder=\"Enter your email\">\r\n    <button type=\"submit\">Submit</button>\r\n  </form>\r\n  <p>Your email: {{ email }}</p>\r\n</div>\r\n\r\n<script>\r\n  Vue.createApp({\r\n    data() {\r\n      return {\r\n        email: \'\'\r\n      };\r\n    },\r\n    methods: {\r\n      handleSubmit() {\r\n        alert(`Submitted: ${this.email}`);\r\n      }\r\n    }\r\n  }).mount(\'#app\');\r\n</script>', NULL, '2025-07-22 10:08:40', '2025-07-22 10:08:40', 'The form prevents page reload and calls handleSubmit on submit.', NULL),
-(173, 68, 'nbvgf', 'نتالب', 'نتاف', NULL, '2025-08-06 06:59:02', '2025-08-08 08:25:03', 'منتالبي', NULL);
+
 
 -- --------------------------------------------------------
 
