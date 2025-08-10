@@ -2,6 +2,15 @@
 @section('title', 'About Us')
 
 @section('content')
+<style>
+    .modal {
+    margin-top: 80px; 
+}
+
+.modal-dialog {
+    margin-top: 5rem; 
+}
+</style>
     <div class="containerr d-flex flex-column justify-content-center align-items-center text-center">
         <h1 class=" typewriter text-info" >About Us</h1>
         <p class=" prgraph mt-5">

@@ -67,6 +67,15 @@
     transform: scale(1.02); /* تحجيم أقل على hover */
   }
 }
+
+    .modal {
+    margin-top: 80px; /* حسب ارتفاع الهيدر */
+}
+
+.modal-dialog {
+    margin-top: 5rem; /* 5rem ≈ 80px */
+}
+
     </style>
 
 

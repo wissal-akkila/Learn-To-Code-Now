@@ -19,7 +19,19 @@
             bottom: -30px;
 
 
-        }</style>
+        }
+        
+     
+    .modal {
+    margin-top: 80px; /* حسب ارتفاع الهيدر */
+}
+
+.modal-dialog {
+    margin-top: 5rem; /* 5rem ≈ 80px */
+}
+
+        
+        </style>
     <section class="container py-5 tutorial">
            <div class="text-center mb-5">
         <h1 class="h1 fw-bold text-info typewriter" >  <i class="bi bi-book-fill"></i> Our Courses</h1>

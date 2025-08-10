@@ -3,6 +3,17 @@
 @section('title', 'Coding Tips')
 
 @section('content')
+<style>
+    .modal {
+    margin-top: 80px; /* حسب ارتفاع الهيدر */
+}
+
+.modal-dialog {
+    margin-top: 5rem; /* 5rem ≈ 80px */
+}
+</style>
+
+
     <div class="section-wrapper py-5">
         <!-- Swiper Section (Left) -->
         <div style="    max-width: 260px;">

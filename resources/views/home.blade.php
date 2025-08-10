@@ -2,7 +2,15 @@
 @section('title', 'Home ')
 
 @section('content')
+<style>
+    .modal {
+    margin-top: 80px; /* حسب ارتفاع الهيدر */
+}
 
+.modal-dialog {
+    margin-top: 5rem; /* 5rem ≈ 80px */
+}
+</style>
     {{-- الشاشات الصغيرة والمتوسطة --}}
     <div class="col-md-12 d-block d-lg-none position-relative p-0"style="z-index: 1;">
         <img src="{{ asset('images/home.jpeg') }}" class="img-fluid w-100" alt="">
@@ -105,8 +113,9 @@
         </div>
     </div>
     <div class="col-lg-6"style="height: 100%;">
-        <img src="{{ asset('images/home image 1 (4).jpeg') }}" class="img-fluid w-100 mt-5" data-aos="fade-left" data-aos-anchor="#example-anchor"
-            data-aos-offset="500" data-aos-duration="500" alt=""style="height: 100%; object-fit: cover;">
+        <img src="{{ asset('images/home image 1 (4).jpeg') }}" class="img-fluid w-100 mt-5"
+         data-aos="fade-left"
+      alt=""style="height: 100%; object-fit: cover;">
     </div>
 </div>
 </div>

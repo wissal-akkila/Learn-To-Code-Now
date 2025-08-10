@@ -2,7 +2,15 @@
 @section('title', 'Contact Us')
 
 @section('content')
+<style>
+    .modal {
+    margin-top: 80px; /* حسب ارتفاع الهيدر */
+}
 
+.modal-dialog {
+    margin-top: 5rem; /* 5rem ≈ 80px */
+}
+</style>
 <div class="container text-center">
     <h1 class="text-center text-info fw-bold typewriter mt-5 " >   <i class="bi bi-telephone-fill"></i>    Contact Us</h1>
     <p class="text-center prgraph">Want to know more? Or need assistance? Get in touch with us now! We love hearing from you and will be happy to help</p>
